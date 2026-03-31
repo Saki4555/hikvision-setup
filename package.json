@@ -1,0 +1,14 @@
+{
+  "name": "hikvision-attendance",
+  "version": "1.0.0",
+  "description": "Hikvision face recognition attendance collector",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "mysql2": "^3.6.0",
+    "dotenv": "^16.3.0"
+  }
+}
