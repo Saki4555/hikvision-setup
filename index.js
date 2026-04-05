@@ -120,10 +120,9 @@ async function insertIntoHRMS(empNo, inOutTime, resolvedType, ipAddress) {
 async function insertAttendance(empNo, inOutTime, inOutType, ipAddress) {
   const resolvedType = resolveInOutType(inOutType, inOutTime);
 
-  const simpleTime = new Date(inOutTime)
-    .toISOString()
-    .replace("T", " ")
-    .substring(0, 19);
+ const simpleTime = inOutTime
+  .replace("T", " ")
+  .substring(0, 19);
 
   await insertIntoMySQL(empNo, inOutTime, resolvedType, ipAddress, simpleTime);
 
