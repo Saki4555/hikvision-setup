@@ -178,7 +178,7 @@ async function main() {
   console.log("==============================================");
   console.log("  Hikvision Attendance System — Node.js");
   console.log("  Local MySQL  →  direct insert");
-  console.log("  Oracle HRMS  →  via API (localhost:4000)");
+  console.log(`  Oracle HRMS  →  via API (${process.env.HRMS_API_URL})`);
   console.log("  Started at: " + new Date().toLocaleString());
   console.log("==============================================\n");
 
@@ -199,7 +199,7 @@ async function main() {
         HRMS_API_URL + "?page=1&limit=1",
         { headers: { Authorization: `Bearer ${HRMS_API_TOKEN}` }, timeout: 5000 }
       );
-      console.log("[✓] HRMS API connected (localhost:4000).");
+      console.log(`[✓] HRMS API connected (${process.env.HRMS_API_URL}).`);
     } catch (err) {
       console.warn("[!] HRMS API not reachable —", err.message);
       console.warn("    Data will still be saved to MySQL.");
