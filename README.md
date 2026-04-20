@@ -95,6 +95,11 @@ HRMS_API_TOKEN=your_token_here
 # ---- Polling interval (milliseconds) ----
 POLL_INTERVAL_MS=10000
 
+# ---- Fallback window on fresh install (no checkpoint) ----
+# Used only when attendance.db does not exist (new PC / first run)
+# Device stores ~150,000 events — increase if PC was off longer than 30 days
+FALLBACK_DAYS=30
+
 # ---- Hikvision Devices ----
 # in_out: 1 = always IN, 2 = always OUT, 3 = auto by time of day
 TERMINALS=[{"ip":"192.168.0.107","in_out":3,"api_string":"http://192.168.0.107/ISAPI/AccessControl/AcsEvent?format=json","location":"Main Entrance"}]
@@ -134,7 +139,7 @@ Expected output on successful start:
 [2026-04-20 09:00:00] [INFO ]   5. Watchdog      — HTTP error logging
 [2026-04-20 09:00:00] [INFO ] SQLite stats — Total: 0 | Pending: 0 | Synced: 0 | Failed: 0
 [2026-04-20 09:00:00] [INFO ] HRMS API reachable — starting poll loop
-[2026-04-20 09:00:00] [POLL ] Polling 192.168.0.107 from 2026-04-10T00:00:00+06:00
+[2026-04-20 09:00:00] [POLL ] Polling 192.168.0.107 from 2026-03-21T00:00:00+06:00
 [2026-04-20 09:00:00] [POLL ] 131 event(s) received from 192.168.0.107
 [2026-04-20 09:00:00] [INFO ] Saved 131 punch(es) as PENDING
 [2026-04-20 09:00:00] [SYNC ] Syncing 100 PENDING record(s) to HRMS...
@@ -220,6 +225,8 @@ Log file is wiped clean on every script restart — no unbounded growth.
 | `401` in service_log.txt | `HRMS_API_TOKEN` expired — update it in `.env` |
 | `404` in service_log.txt | `HRMS_API_URL` changed — update it in `.env` |
 | `503` in service_log.txt | HRMS server under maintenance — punches are queued safely |
+| Fresh PC / `attendance.db` missing | Script automatically fetches last `FALLBACK_DAYS` days from device — no action needed |
+| PC was off longer than `FALLBACK_DAYS` | Increase `FALLBACK_DAYS` in `.env` and restart — e.g. set to `60` if PC was off 60 days |
 
 ---
 

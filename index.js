@@ -9,7 +9,7 @@
 //    5. Watchdog error log   — specific HTTP error messages
 // =============================================
 require("dotenv").config();
-const axios  = require("axios");
+const axios = require("axios");
 const logger = require("./logger");
 const {
   getCheckpoint,
@@ -24,8 +24,9 @@ const { getDataFromApi } = require("./hikvision");
 
 // ---- Config ----
 const POLL_INTERVAL_MS = parseInt(process.env.POLL_INTERVAL_MS) || 10000;
-const HRMS_API_URL     = process.env.HRMS_API_URL   || "http://localhost:4000/api/attlog";
-const HRMS_API_TOKEN   = process.env.HRMS_API_TOKEN || "123456";
+const HRMS_API_URL =
+  process.env.HRMS_API_URL || "http://localhost:4000/api/attlog";
+const HRMS_API_TOKEN = process.env.HRMS_API_TOKEN || "123456";
 
 // How many PENDING records to send per sync cycle
 // Prevents flooding the HRMS API after a long downtime
@@ -72,10 +73,16 @@ function getStartTime(ipAddress) {
   const checkpoint = getCheckpoint(ipAddress);
   if (checkpoint) return checkpoint;
 
-  // First run ever — go back 10 days
-  const tenDaysAgo = new Date(Date.now() - 10 * 24 * 60 * 60 * 1000);
-  const fallback = tenDaysAgo.toISOString().substring(0, 10) + "T00:00:00+06:00";
-  logger.info(`No checkpoint for ${ipAddress} — first run, fetching last 10 days`);
+  // First run ever — go back X days (configurable via .env, default 30)
+  const fallbackDays = parseInt(process.env.FALLBACK_DAYS) || 30;
+  const fallbackDate = new Date(
+    Date.now() - fallbackDays * 24 * 60 * 60 * 1000,
+  );
+  const fallback =
+    fallbackDate.toISOString().substring(0, 10) + "T00:00:00+06:00";
+  logger.info(
+    `No checkpoint for ${ipAddress} — first run, fetching last ${fallbackDays} days`,
+  );
   return fallback;
 }
 
@@ -86,15 +93,15 @@ function getStartTime(ipAddress) {
 // =============================================
 async function sendOneToHRMS(punch) {
   const body = {
-    AM_EMPNO:       parseInt(punch.emp_no),
+    AM_EMPNO: parseInt(punch.emp_no),
     AM_TIME_IN_OUT: punch.in_out_time,
     AM_TYPE_IN_OUT: punch.in_out_type,
-    AM_MAC_ID:      punch.ip_address,
-    AM_LAT_IN_OUT:  null,
-    AM_LON_IN_OUT:  null,
-    T_ZONE:         null,
-    LOCATION_ID:    null,
-    TEAM_LEAD_ID:   null,
+    AM_MAC_ID: punch.ip_address,
+    AM_LAT_IN_OUT: null,
+    AM_LON_IN_OUT: null,
+    T_ZONE: null,
+    LOCATION_ID: null,
+    TEAM_LEAD_ID: null,
   };
 
   try {
@@ -112,9 +119,8 @@ async function sendOneToHRMS(punch) {
     }
 
     return { success: false, error: `Unexpected status ${response.status}` };
-
   } catch (err) {
-    const status  = err.response?.status;
+    const status = err.response?.status;
     const message = err.response?.data?.error || err.message;
 
     // Duplicate in Oracle — treat as success (data already there)
@@ -148,8 +154,8 @@ async function syncPendingBatch() {
 
   logger.sync(`Syncing ${batch.length} PENDING record(s) to HRMS...`);
 
-  let synced  = 0;
-  let failed  = 0;
+  let synced = 0;
+  let failed = 0;
 
   for (const punch of batch) {
     const result = await sendOneToHRMS(punch);
@@ -170,8 +176,10 @@ async function syncPendingBatch() {
     }
   }
 
-  if (synced > 0) logger.sync(`Batch complete — ${synced} synced, ${failed} failed`);
-  if (failed > 0) logger.warn(`${failed} record(s) failed — will retry next cycle`);
+  if (synced > 0)
+    logger.sync(`Batch complete — ${synced} synced, ${failed} failed`);
+  if (failed > 0)
+    logger.warn(`${failed} record(s) failed — will retry next cycle`);
 }
 
 // =============================================
@@ -184,8 +192,8 @@ async function pollDevice(terminal) {
 
   // Feature 1: Checkpoint — only ask for events after last known time
   const startTime = getStartTime(ip);
-  const tomorrow  = new Date(Date.now() + 86400000);
-  const endTime   = tomorrow.toISOString().substring(0, 10) + "T00:00:00+06:00";
+  const tomorrow = new Date(Date.now() + 86400000);
+  const endTime = tomorrow.toISOString().substring(0, 10) + "T00:00:00+06:00";
 
   logger.poll(`Polling ${ip} from ${startTime}`);
 
@@ -202,7 +210,7 @@ async function pollDevice(terminal) {
   const punchesToSave = [];
 
   for (const event of events) {
-    const time  = event.time;
+    const time = event.time;
     const empNo = event.employeeNoString || null;
 
     // Always update checkpoint — even for door lock / system events
@@ -214,10 +222,10 @@ async function pollDevice(terminal) {
     const resolvedType = resolveInOutType(in_out, time);
 
     punchesToSave.push({
-      emp_no:      empNo,
+      emp_no: empNo,
       in_out_time: time,
       in_out_type: resolvedType,
-      ip_address:  ip,
+      ip_address: ip,
     });
   }
 
@@ -249,10 +257,14 @@ async function main() {
 
   // ---- Startup stats ----
   const stats = getStats();
-  logger.info(`SQLite stats — Total: ${stats.total} | Pending: ${stats.pending} | Synced: ${stats.synced} | Failed: ${stats.failed}`);
+  logger.info(
+    `SQLite stats — Total: ${stats.total} | Pending: ${stats.pending} | Synced: ${stats.synced} | Failed: ${stats.failed}`,
+  );
 
   if (stats.pending > 0) {
-    logger.warn(`${stats.pending} PENDING record(s) from previous session — will sync now`);
+    logger.warn(
+      `${stats.pending} PENDING record(s) from previous session — will sync now`,
+    );
   }
 
   // ---- Show terminals ----
@@ -260,7 +272,9 @@ async function main() {
   logger.info(`Loaded ${terminals.length} terminal(s):`);
   terminals.forEach((t) => {
     const checkpoint = getCheckpoint(t.ip) || "first run";
-    logger.info(`  → ${t.ip} | ${t.location || "no location"} | checkpoint: ${checkpoint}`);
+    logger.info(
+      `  → ${t.ip} | ${t.location || "no location"} | checkpoint: ${checkpoint}`,
+    );
   });
 
   // ---- Test HRMS API ----
@@ -272,14 +286,15 @@ async function main() {
     logger.info("HRMS API reachable — starting poll loop");
   } catch (err) {
     logger.warn(`HRMS API not reachable on startup — ${err.message}`);
-    logger.warn("Polling will continue — punches saved locally until API recovers");
+    logger.warn(
+      "Polling will continue — punches saved locally until API recovers",
+    );
   }
 
   logger.info("----------------------------------------------");
 
   // ---- Infinite poll loop ----
   while (true) {
-
     // Step 1: Sync PENDING records to HRMS (drain backlog first)
     try {
       await syncPendingBatch();
