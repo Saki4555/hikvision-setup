@@ -1,148 +1,168 @@
 # Hikvision Attendance System
 
-A Node.js service that continuously pulls face recognition attendance events from Hikvision devices and sends them to the HRMS Oracle database via API. Uses SQLite locally to track progress and queue failed requests for automatic retry.
+A production-grade Node.js service that continuously pulls face recognition attendance events from Hikvision devices and syncs them to the HRMS Oracle database via API. Built for reliability — zero data loss even when the HRMS API is down or the PC is offline for extended periods.
 
 ---
 
-## How It Works
+## Architecture
 
 ```
 Hikvision Device (Face Recognition)
           ↓  polls every 10 seconds
       Node.js Service
-          ↓                    ↓
-  SQLite (local)          HRMS API
-  - last punch time    POST /api/attlog
-  - retry queue              ↓
-                       Oracle ATT_LOG
+          ↓
+  SQLite (attendance.db)
+  status = PENDING
+          ↓
+  Sync worker (every cycle)
+          ↓
+  POST /api/attlog → HRMS API
+          ↓
+  Oracle ATT_LOG
+  status = SYNCED
 ```
 
-- **No data loss** — if the HRMS API is unreachable, punches are saved to a local SQLite retry queue and automatically retried on the next cycle
-- **Survives restarts** — SQLite tracks the exact last punch time per device, so on restart the script picks up from exactly where it left off — even after weeks offline
-- **Pagination** — fetches all records from the device in pages of 1000, so catching up after a long offline period works correctly regardless of how many records are waiting
+### Core Features
+
+| Feature | Description |
+|---|---|
+| **Checkpoint** | Reads `MAX(punch_time)` from SQLite before every poll — never re-fetches data already collected |
+| **State Machine** | Every punch saved as `PENDING` first, only marked `SYNCED` after confirmed `200/201` from HRMS API |
+| **Anti-Flood Batcher** | Sends max 100 records per cycle with 200ms delay between requests — safe for Oracle server after long downtime |
+| **Positive ACK** | Only marks `SYNCED` on HTTP `200` or `201` — timeouts and `500` errors keep status as `PENDING` for retry |
+| **Watchdog Logger** | Logs specific HTTP error codes (`401`, `404`, `503` etc.) with human-readable IT messages |
+| **Pagination** | Fetches device records in pages of 1000 — handles months of missed data correctly |
+| **Auto Restart** | `.bat` file restarts the script automatically if it crashes |
+| **Auto Start** | Task Scheduler starts the script silently on every Windows login |
 
 ---
 
 ## Requirements
 
 - Windows PC or laptop that stays on during office hours
-- Node.js v20 or later
+- Node.js v20 LTS or later
 - Hikvision device connected to the same local network
-- HRMS backend running and accessible
+- HRMS backend API running and accessible
 
 ---
 
-## STEP 1 — Install Node.js
+## Device Setup
+
+> ### 👉 [Hik-Vision Setup Guide](https://www.notion.so/Hik-Vision-DS-K1T343-setup-334c08e7602580d0a4fbd018b3f944b6)
+
+---
+
+## Installation
+
+### STEP 1 — Install Node.js
 
 1. Go to [https://nodejs.org](https://nodejs.org)
 2. Download the **LTS version**
 3. Install with all default options
-4. Verify the installation — open Command Prompt and run:
+4. Verify — open Command Prompt and run:
    ```
    node -v
    ```
-   You should see something like `v20.x.x`
+   Expected output: `v20.x.x` or later
 
 ---
 
-## STEP 2 — Find Your Device IP
+### STEP 2 — Find Your Device IP
 
-1. Download the **Hikvision SADP Tool** from:
+1. Download **Hikvision SADP Tool** from:
    [https://www.hikvision.com/en/support/tools/sadp/](https://www.hikvision.com/en/support/tools/sadp/)
 2. Install and open it
-3. Make sure the Hikvision device is connected to the same network
+3. Make sure the Hikvision device is on the same network
 4. Your device will appear in the list with its IP address
-5. Note it down — you will need it in the next step
+5. Note it down — you need it in Step 3
 
 ---
 
-## STEP 3 — Configure the .env File
+### STEP 3 — Configure `.env`
 
 Open the `.env` file in Notepad and fill in your values:
 
 ```env
-# HRMS API
+# ---- Environment ----
+# development = all logs written to service_log.txt
+# production  = only WARN and ERROR written to service_log.txt
+NODE_ENV=development
+
+# ---- HRMS API ----
 HRMS_API_URL=http://localhost:4000/api/attlog
 HRMS_API_TOKEN=your_token_here
 
-# Polling interval in milliseconds (10000 = 10 seconds)
+# ---- Polling interval (milliseconds) ----
 POLL_INTERVAL_MS=10000
 
-# Hikvision devices — one object per device
-# in_out: 1 = always IN, 2 = always OUT, 3 = auto by time (before 11am = IN, after = OUT)
+# ---- Hikvision Devices ----
+# in_out: 1 = always IN, 2 = always OUT, 3 = auto by time of day
 TERMINALS=[{"ip":"192.168.0.107","in_out":3,"api_string":"http://192.168.0.107/ISAPI/AccessControl/AcsEvent?format=json","location":"Main Entrance"}]
 ```
 
-**For multiple devices**, add more objects to the array:
+**Multiple devices** — add more objects to the array:
 ```env
 TERMINALS=[{"ip":"192.168.0.107","in_out":3,"api_string":"http://192.168.0.107/ISAPI/AccessControl/AcsEvent?format=json","location":"Main Entrance"},{"ip":"192.168.0.108","in_out":2,"api_string":"http://192.168.0.108/ISAPI/AccessControl/AcsEvent?format=json","location":"Exit Gate"}]
 ```
 
 ---
 
-## STEP 4 — Install Dependencies
+### STEP 4 — Install Dependencies
 
-Open Command Prompt, navigate to the project folder, and run:
-
-```
+```bash
 cd C:\attendance-system
 npm install
 ```
 
 ---
 
-## STEP 5 — Run the Script
+### STEP 5 — Run Manually (for testing)
 
-```
+```bash
 node index.js
 ```
 
-On a successful start you will see:
+Expected output on successful start:
 
 ```
-==============================================
-  Hikvision Attendance System — Node.js
-  Oracle HRMS  →  via API
-  Retry queue  →  SQLite (attendance.db)
-  API: http://localhost:4000/api/attlog
-  Started at: 19/04/2026, 09:00:00
-==============================================
-
-[✓] HRMS API connected.
-
-[✓] Loaded 1 terminal(s):
-    → 192.168.0.107 | Main Entrance
-      Last time: first run — will fetch last 10 days
-
-[POLLING] 192.168.0.107
-  From: 2026-04-09T00:00:00+06:00
-  Found 131 event(s).
-    [HRMS ✓] Emp: 200002 | 2026-04-15T08:32:11+06:00 | IN
-    [HRMS ✓] Emp: 200023 | 2026-04-15T08:45:07+06:00 | IN
-
-[WAITING] 10s until next poll...
+[2026-04-20 09:00:00] [INFO ] ==============================================
+[2026-04-20 09:00:00] [INFO ]   Hikvision Attendance System — Node.js v5
+[2026-04-20 09:00:00] [INFO ]   1. Checkpoint   — incremental device fetch
+[2026-04-20 09:00:00] [INFO ]   2. State machine — PENDING → SYNCED
+[2026-04-20 09:00:00] [INFO ]   3. Anti-flood    — batch sync (100/cycle)
+[2026-04-20 09:00:00] [INFO ]   4. Positive ACK  — confirmed 200/201 only
+[2026-04-20 09:00:00] [INFO ]   5. Watchdog      — HTTP error logging
+[2026-04-20 09:00:00] [INFO ] SQLite stats — Total: 0 | Pending: 0 | Synced: 0 | Failed: 0
+[2026-04-20 09:00:00] [INFO ] HRMS API reachable — starting poll loop
+[2026-04-20 09:00:00] [POLL ] Polling 192.168.0.107 from 2026-04-10T00:00:00+06:00
+[2026-04-20 09:00:00] [POLL ] 131 event(s) received from 192.168.0.107
+[2026-04-20 09:00:00] [INFO ] Saved 131 punch(es) as PENDING
+[2026-04-20 09:00:00] [SYNC ] Syncing 100 PENDING record(s) to HRMS...
+[2026-04-20 09:00:20] [SYNC ] Batch complete — 100 synced, 0 failed
 ```
 
 ---
 
-## STEP 6 — Set Up Auto Start (Windows)
+### STEP 6 — Set Up Auto Start (Windows Task Scheduler)
 
-So the script starts automatically every time the PC is turned on:
+So the script starts silently in the background every time the PC is turned on:
 
-1. **Task Scheduler** → Open it via Start Menu search
-2. Click **Create Basic Task** on the right
+1. Open **Task Scheduler** via Start Menu search
+2. Click **Create Basic Task** on the right panel
 3. Set **Name**: `Attendance System`
 4. Set **Trigger**: `When I log on`
 5. Set **Action**: `Start a program`
-6. **Program/script**: `wscript.exe`
-7. **Add arguments**: `"C:\attendance-system\run_hidden.vbs"` *(update path)*
-8. **Start in**: `C:\attendance-system` *(update path)*
-9. After creating, right-click the task → **Properties**:
+6. Configure the action:
+   - **Program/script**: `wscript.exe`
+   - **Add arguments**: `"C:\attendance-system\run_hidden.vbs"` *(update to your actual path)*
+   - **Start in**: `C:\attendance-system` *(update to your actual path)*
+7. After creating, right-click the task → **Properties**:
    - **General** tab → check **Run with highest privileges**
    - **Conditions** tab → uncheck **Start only if on AC power**
    - **Settings** tab → uncheck **Stop the task if it runs longer than**
+8. Verify — after logging in, the task **Last Run Time** should match your login time
 
-The script will now start silently in the background every time the PC boots. All output is saved to `service_log.txt` in the project folder.
+> **Tip**: In the right-side Actions pane, select **Enable All Tasks History**, then check the **History** tab for `Event 102` (Task Completed) to confirm it ran.
 
 ---
 
@@ -154,15 +174,36 @@ The script will now start silently in the background every time the PC boots. Al
 | `2` | Always recorded as OUT |
 | `3` | Auto — before 11:00am = IN, 11:00am onwards = OUT |
 
-Set per device in the `TERMINALS` array in `.env`.
+Configured per device in the `TERMINALS` array in `.env`.
 
 ---
 
-## Retry Queue
+## Punch Lifecycle
 
-If the HRMS API is unreachable when a punch comes in, the punch is saved to a local SQLite database (`attendance.db`) and retried automatically at the start of every poll cycle. After 10 failed attempts, the record is discarded and a warning is logged.
+```
+Device event received
+      ↓
+Saved to SQLite → status: PENDING
+      ↓
+Sync worker tries HRMS API
+      ↓
+  200/201 → status: SYNCED ✅
+  timeout/500 → status: PENDING (retry next cycle)
+  after 10 failed attempts → status: FAILED ⚠️
+```
 
-On startup, if there are punches from a previous session waiting in the queue, they are retried immediately before polling begins.
+---
+
+## Logging
+
+Controlled by `NODE_ENV` in `.env`:
+
+| Mode | Console | `service_log.txt` |
+|---|---|---|
+| `development` | All levels | All levels |
+| `production` | All levels | `WARN` and `ERROR` only |
+
+Log file is wiped clean on every script restart — no unbounded growth.
 
 ---
 
@@ -170,31 +211,36 @@ On startup, if there are punches from a previous session waiting in the queue, t
 
 | Problem | Solution |
 |---|---|
-| `HRMS API not reachable` | Check the HRMS backend is running and `HRMS_API_URL` in `.env` is correct |
-| `No terminals found` | Check the `TERMINALS` value in `.env` is valid JSON |
+| `HRMS API not reachable` | Check HRMS backend is running and `HRMS_API_URL` in `.env` is correct |
+| `No terminals found` | Check `TERMINALS` in `.env` is valid JSON |
 | `No new events` | Verify device IP is correct and device is on the same network |
-| Device not responding | Run `ping 192.168.x.x` in Command Prompt to check connectivity |
-| Wrong device password | Default is `hik12345` — if changed, update the `specialIps` section in `hikvision.js` |
-| Script not auto-starting | Check Task Scheduler → verify the task status shows `Ready` and last run time matches login time |
+| Device not responding | Run `ping 192.168.x.x` in Command Prompt |
+| Wrong device password | Default is `hik12345` — if changed, update `specialIps` in `hikvision.js` |
+| Script not auto-starting | Open Task Scheduler → verify status is `Ready` and last run time matches login |
+| `401` in service_log.txt | `HRMS_API_TOKEN` expired — update it in `.env` |
+| `404` in service_log.txt | `HRMS_API_URL` changed — update it in `.env` |
+| `503` in service_log.txt | HRMS server under maintenance — punches are queued safely |
 
 ---
 
-## Files
+## Project Files
 
 | File | Purpose |
 |---|---|
-| `index.js` | Main polling loop |
-| `hikvision.js` | Hikvision device API client with Digest Auth and pagination |
-| `localDb.js` | SQLite — tracks last punch time and retry queue |
-| `start-attendance.bat` | Runs the script and auto-restarts on crash |
-| `run_hidden.vbs` | Launches the `.bat` file silently with no visible window |
-| `attendance.db` | Auto-created SQLite database file |
-| `.env` | Configuration — API URL, token, device list |
+| `index.js` | Main polling and sync loop |
+| `hikvision.js` | Hikvision device API client — Digest Auth + pagination |
+| `localDb.js` | SQLite — checkpoint tracking and punch state machine |
+| `logger.js` | Structured logger — console + file with `NODE_ENV` control |
+| `start-attendance.bat` | Runs the script, auto-restarts on crash, wipes log on start |
+| `run_hidden.vbs` | Launches `.bat` silently — no visible CMD window |
+| `attendance.db` | Auto-created SQLite database — do not delete |
+| `.env` | Configuration — API credentials, device list, environment |
+| `service_log.txt` | Auto-created log file — wiped on each restart |
 
 ---
 
 ## Stopping the Script
 
-If running manually in a terminal window, press `Ctrl + C`.
+**Manual run** — press `Ctrl + C` in the terminal.
 
-If running via Task Scheduler (hidden), open **Task Scheduler**, find `Attendance System`, and click **End**.
+**Running via Task Scheduler** — open Task Scheduler, find `Attendance System`, click **End Task**.

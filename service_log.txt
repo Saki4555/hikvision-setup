@@ -42155,3 +42155,2204 @@
 [2026-04-19 11:45:19] [POLL ] 1 event(s) received from 192.168.0.200
 [2026-04-19 11:45:19] [POLL ] No employee punches in this batch from 192.168.0.200
 [2026-04-19 11:45:19] [INFO ] Waiting 10s...
+[START] System initiated at Sun 04/19/2026 18:29:32.99 
+◇ injected env (4) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+[2026-04-19 12:29:43] [INFO ] ==============================================
+[2026-04-19 12:29:43] [INFO ]   Hikvision Attendance System — Node.js v5
+[2026-04-19 12:29:43] [INFO ]   1. Checkpoint   — incremental device fetch
+[2026-04-19 12:29:43] [INFO ]   2. State machine — PENDING → SYNCED
+[2026-04-19 12:29:43] [INFO ]   3. Anti-flood    — batch sync (100/cycle)
+[2026-04-19 12:29:43] [INFO ]   4. Positive ACK  — confirmed 200/201 only
+[2026-04-19 12:29:43] [INFO ]   5. Watchdog      — HTTP error logging
+[2026-04-19 12:29:43] [INFO ]   API: http://138.252.15.101:4000/api/attlog
+[2026-04-19 12:29:43] [INFO ] ==============================================
+[2026-04-19 12:29:43] [INFO ] SQLite stats — Total: 19 | Pending: 0 | Synced: 19 | Failed: 0
+[2026-04-19 12:29:43] [INFO ] Loaded 1 terminal(s):
+[2026-04-19 12:29:43] [INFO ]   → 192.168.0.200 | Main Entrance | checkpoint: 2026-04-19T17:43:49+06:00
+[2026-04-19 12:29:44] [INFO ] HRMS API reachable — starting poll loop
+[2026-04-19 12:29:44] [INFO ] ----------------------------------------------
+[2026-04-19 12:29:44] [POLL ] Polling 192.168.0.200 from 2026-04-19T17:43:49+06:00
+[2026-04-19 12:29:44] [POLL ] 4 event(s) received from 192.168.0.200
+[2026-04-19 12:29:44] [INFO ] Saved 1 punch(es) as PENDING from 192.168.0.200
+[2026-04-19 12:29:44] [INFO ] Waiting 10s...
+[2026-04-19 12:29:54] [SYNC ] Syncing 1 PENDING record(s) to HRMS...
+[2026-04-19 12:29:54] [SYNC ] Batch complete — 1 synced, 0 failed
+[2026-04-19 12:29:54] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:29:55] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:29:55] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:29:55] [INFO ] Waiting 10s...
+[2026-04-19 12:30:05] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:30:05] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:30:05] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:30:05] [INFO ] Waiting 10s...
+[2026-04-19 12:30:15] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:30:15] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:30:15] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:30:15] [INFO ] Waiting 10s...
+[2026-04-19 12:30:25] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:30:27] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:30:27] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:30:27] [INFO ] Waiting 10s...
+[2026-04-19 12:30:37] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:30:37] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:30:37] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:30:37] [INFO ] Waiting 10s...
+[2026-04-19 12:30:47] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:30:47] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:30:47] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:30:47] [INFO ] Waiting 10s...
+[2026-04-19 12:30:57] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:30:57] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:30:57] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:30:57] [INFO ] Waiting 10s...
+[2026-04-19 12:31:07] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:31:08] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:31:08] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:31:08] [INFO ] Waiting 10s...
+[2026-04-19 12:31:18] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:31:19] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:31:19] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:31:19] [INFO ] Waiting 10s...
+[2026-04-19 12:31:29] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:31:30] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:31:30] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:31:30] [INFO ] Waiting 10s...
+[2026-04-19 12:31:40] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:31:41] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:31:41] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:31:41] [INFO ] Waiting 10s...
+[2026-04-19 12:31:51] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:31:51] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:31:51] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:31:51] [INFO ] Waiting 10s...
+[2026-04-19 12:32:01] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:32:01] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:32:01] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:32:01] [INFO ] Waiting 10s...
+[2026-04-19 12:32:11] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:32:12] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:32:12] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:32:12] [INFO ] Waiting 10s...
+[2026-04-19 12:32:22] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:32:22] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:32:22] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:32:22] [INFO ] Waiting 10s...
+[2026-04-19 12:32:32] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:32:32] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:32:32] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:32:32] [INFO ] Waiting 10s...
+[2026-04-19 12:32:42] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:32:49] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:32:49] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:32:49] [INFO ] Waiting 10s...
+[2026-04-19 12:32:59] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:32:59] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:32:59] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:32:59] [INFO ] Waiting 10s...
+[2026-04-19 12:33:09] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:33:10] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:33:10] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:33:10] [INFO ] Waiting 10s...
+[2026-04-19 12:33:20] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:33:20] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:33:20] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:33:20] [INFO ] Waiting 10s...
+[2026-04-19 12:33:30] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:33:30] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:33:30] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:33:30] [INFO ] Waiting 10s...
+[2026-04-19 12:33:40] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:33:40] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:33:40] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:33:40] [INFO ] Waiting 10s...
+[2026-04-19 12:33:50] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:33:50] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:33:50] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:33:50] [INFO ] Waiting 10s...
+[2026-04-19 12:34:00] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:34:01] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:34:01] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:34:01] [INFO ] Waiting 10s...
+[2026-04-19 12:34:11] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:34:11] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:34:11] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:34:11] [INFO ] Waiting 10s...
+[2026-04-19 12:34:21] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:34:21] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:34:21] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:34:21] [INFO ] Waiting 10s...
+[2026-04-19 12:34:31] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:34:31] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:34:31] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:34:31] [INFO ] Waiting 10s...
+[2026-04-19 12:34:41] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:34:42] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:34:42] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:34:42] [INFO ] Waiting 10s...
+[2026-04-19 12:34:52] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:34:52] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:34:52] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:34:52] [INFO ] Waiting 10s...
+[2026-04-19 12:35:02] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:35:02] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:35:02] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:35:02] [INFO ] Waiting 10s...
+[2026-04-19 12:35:12] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:35:12] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:35:12] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:35:12] [INFO ] Waiting 10s...
+[2026-04-19 12:35:22] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:35:22] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:35:22] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:35:22] [INFO ] Waiting 10s...
+[2026-04-19 12:35:32] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:35:33] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:35:33] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:35:33] [INFO ] Waiting 10s...
+[2026-04-19 12:35:43] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:35:43] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:35:43] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:35:43] [INFO ] Waiting 10s...
+[2026-04-19 12:35:53] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:35:53] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:35:53] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:35:53] [INFO ] Waiting 10s...
+[2026-04-19 12:36:03] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:36:04] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:36:04] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:36:04] [INFO ] Waiting 10s...
+[2026-04-19 12:36:14] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:36:14] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:36:14] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:36:14] [INFO ] Waiting 10s...
+[2026-04-19 12:36:24] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:36:24] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:36:24] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:36:24] [INFO ] Waiting 10s...
+[2026-04-19 12:36:34] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:36:37] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:36:37] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:36:37] [INFO ] Waiting 10s...
+[2026-04-19 12:36:47] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:36:47] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:36:47] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:36:47] [INFO ] Waiting 10s...
+[2026-04-19 12:36:57] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:36:58] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:36:58] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:36:58] [INFO ] Waiting 10s...
+[2026-04-19 12:37:08] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:37:08] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:37:08] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:37:08] [INFO ] Waiting 10s...
+[2026-04-19 12:37:18] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:37:18] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:37:18] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:37:18] [INFO ] Waiting 10s...
+[2026-04-19 12:37:28] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:37:28] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:37:28] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:37:28] [INFO ] Waiting 10s...
+[2026-04-19 12:37:38] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:37:38] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:37:38] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:37:38] [INFO ] Waiting 10s...
+[2026-04-19 12:37:48] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:37:49] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:37:49] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:37:49] [INFO ] Waiting 10s...
+[2026-04-19 12:37:59] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:37:59] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:37:59] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:37:59] [INFO ] Waiting 10s...
+[2026-04-19 12:38:09] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:38:09] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:38:09] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:38:09] [INFO ] Waiting 10s...
+[2026-04-19 12:38:19] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:38:19] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:38:19] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:38:19] [INFO ] Waiting 10s...
+[2026-04-19 12:38:29] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:38:29] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:38:29] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:38:29] [INFO ] Waiting 10s...
+[2026-04-19 12:38:39] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:38:39] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:38:39] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:38:39] [INFO ] Waiting 10s...
+[2026-04-19 12:38:49] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:38:50] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:38:50] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:38:50] [INFO ] Waiting 10s...
+[2026-04-19 12:39:00] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:39:00] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:39:00] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:39:00] [INFO ] Waiting 10s...
+[2026-04-19 12:39:10] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:39:11] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:39:11] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:39:11] [INFO ] Waiting 10s...
+[2026-04-19 12:39:21] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:39:21] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:39:21] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:39:21] [INFO ] Waiting 10s...
+[2026-04-19 12:39:31] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:39:31] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:39:31] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:39:31] [INFO ] Waiting 10s...
+[2026-04-19 12:39:41] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:39:42] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:39:42] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:39:42] [INFO ] Waiting 10s...
+[2026-04-19 12:39:52] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:39:52] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:39:52] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:39:52] [INFO ] Waiting 10s...
+[2026-04-19 12:40:02] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:40:03] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:40:03] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:40:03] [INFO ] Waiting 10s...
+[2026-04-19 12:40:13] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:40:13] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:40:13] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:40:13] [INFO ] Waiting 10s...
+[2026-04-19 12:40:23] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:40:23] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:40:23] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:40:23] [INFO ] Waiting 10s...
+[2026-04-19 12:40:33] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:40:34] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:40:34] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:40:34] [INFO ] Waiting 10s...
+[2026-04-19 12:40:44] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:40:44] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:40:44] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:40:44] [INFO ] Waiting 10s...
+[2026-04-19 12:40:54] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:40:54] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:40:54] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:40:54] [INFO ] Waiting 10s...
+[2026-04-19 12:41:04] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:41:04] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:41:04] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:41:04] [INFO ] Waiting 10s...
+[2026-04-19 12:41:14] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:41:14] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:41:14] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:41:14] [INFO ] Waiting 10s...
+[2026-04-19 12:41:24] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:41:25] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:41:25] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:41:25] [INFO ] Waiting 10s...
+[2026-04-19 12:41:35] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:41:35] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:41:35] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:41:35] [INFO ] Waiting 10s...
+[2026-04-19 12:41:45] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:41:45] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:41:45] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:41:45] [INFO ] Waiting 10s...
+[2026-04-19 12:41:55] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:41:55] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:41:55] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:41:55] [INFO ] Waiting 10s...
+[2026-04-19 12:42:05] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:42:05] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:42:05] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:42:05] [INFO ] Waiting 10s...
+[2026-04-19 12:42:15] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:42:16] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:42:16] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:42:16] [INFO ] Waiting 10s...
+[2026-04-19 12:42:26] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:42:26] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:42:26] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:42:26] [INFO ] Waiting 10s...
+[2026-04-19 12:42:36] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:42:36] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:42:36] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:42:36] [INFO ] Waiting 10s...
+[2026-04-19 12:42:46] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:42:46] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:42:46] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:42:46] [INFO ] Waiting 10s...
+[2026-04-19 12:42:56] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:42:57] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:42:57] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:42:57] [INFO ] Waiting 10s...
+[2026-04-19 12:43:07] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:43:08] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:43:08] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:43:08] [INFO ] Waiting 10s...
+[2026-04-19 12:43:18] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:43:18] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:43:18] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:43:18] [INFO ] Waiting 10s...
+[2026-04-19 12:43:28] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:43:29] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:43:29] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:43:29] [INFO ] Waiting 10s...
+[2026-04-19 12:43:39] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:43:39] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:43:39] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:43:39] [INFO ] Waiting 10s...
+[2026-04-19 12:43:49] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:43:49] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:43:49] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:43:49] [INFO ] Waiting 10s...
+[2026-04-19 12:43:59] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:43:59] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:43:59] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:43:59] [INFO ] Waiting 10s...
+[2026-04-19 12:44:09] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:44:10] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:44:10] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:44:10] [INFO ] Waiting 10s...
+[2026-04-19 12:44:20] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:44:20] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:44:20] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:44:20] [INFO ] Waiting 10s...
+[2026-04-19 12:44:30] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:44:30] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:44:30] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:44:30] [INFO ] Waiting 10s...
+[2026-04-19 12:44:40] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:44:41] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:44:41] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:44:41] [INFO ] Waiting 10s...
+[2026-04-19 12:44:51] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:44:51] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:44:51] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:44:51] [INFO ] Waiting 10s...
+[2026-04-19 12:45:01] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:45:01] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:45:01] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:45:01] [INFO ] Waiting 10s...
+[2026-04-19 12:45:11] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:45:11] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:45:11] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:45:11] [INFO ] Waiting 10s...
+[2026-04-19 12:45:21] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:45:21] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:45:21] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:45:21] [INFO ] Waiting 10s...
+[2026-04-19 12:45:31] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:45:32] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:45:32] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:45:32] [INFO ] Waiting 10s...
+[2026-04-19 12:45:42] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:45:42] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:45:42] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:45:42] [INFO ] Waiting 10s...
+[2026-04-19 12:45:52] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:45:52] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:45:52] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:45:52] [INFO ] Waiting 10s...
+[2026-04-19 12:46:02] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:46:02] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:46:02] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:46:02] [INFO ] Waiting 10s...
+[2026-04-19 12:46:12] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:46:12] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:46:12] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:46:12] [INFO ] Waiting 10s...
+[2026-04-19 12:46:22] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:46:23] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:46:23] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:46:23] [INFO ] Waiting 10s...
+[2026-04-19 12:46:33] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:46:33] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:46:33] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:46:33] [INFO ] Waiting 10s...
+[2026-04-19 12:46:43] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:46:43] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:46:43] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:46:43] [INFO ] Waiting 10s...
+[2026-04-19 12:46:53] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:46:53] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:46:53] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:46:53] [INFO ] Waiting 10s...
+[2026-04-19 12:47:03] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:47:03] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:47:03] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:47:03] [INFO ] Waiting 10s...
+[2026-04-19 12:47:13] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:47:14] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:47:14] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:47:14] [INFO ] Waiting 10s...
+[2026-04-19 12:47:24] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:47:24] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:47:24] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:47:24] [INFO ] Waiting 10s...
+[2026-04-19 12:47:34] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:47:35] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:47:35] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:47:35] [INFO ] Waiting 10s...
+[2026-04-19 12:47:45] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:47:45] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:47:45] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:47:45] [INFO ] Waiting 10s...
+[2026-04-19 12:47:55] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:47:55] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:47:55] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:47:55] [INFO ] Waiting 10s...
+[2026-04-19 12:48:05] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:48:05] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:48:05] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:48:05] [INFO ] Waiting 10s...
+[2026-04-19 12:48:15] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:48:16] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:48:16] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:48:16] [INFO ] Waiting 10s...
+[2026-04-19 12:48:26] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:48:26] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:48:26] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:48:26] [INFO ] Waiting 10s...
+[2026-04-19 12:48:36] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:48:36] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:48:36] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:48:36] [INFO ] Waiting 10s...
+[2026-04-19 12:48:46] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:48:46] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:48:46] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:48:46] [INFO ] Waiting 10s...
+[2026-04-19 12:48:56] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:48:56] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:48:56] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:48:56] [INFO ] Waiting 10s...
+[2026-04-19 12:49:06] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:49:07] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:49:07] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:49:07] [INFO ] Waiting 10s...
+[2026-04-19 12:49:17] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:49:18] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:49:18] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:49:18] [INFO ] Waiting 10s...
+[2026-04-19 12:49:28] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:49:28] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:49:28] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:49:28] [INFO ] Waiting 10s...
+[2026-04-19 12:49:38] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:49:38] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:49:38] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:49:38] [INFO ] Waiting 10s...
+[2026-04-19 12:49:48] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:49:48] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:49:48] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:49:48] [INFO ] Waiting 10s...
+[2026-04-19 12:49:58] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:49:58] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:49:58] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:49:58] [INFO ] Waiting 10s...
+[2026-04-19 12:50:08] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:50:09] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:50:09] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:50:09] [INFO ] Waiting 10s...
+[2026-04-19 12:50:19] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:50:19] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:50:19] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:50:19] [INFO ] Waiting 10s...
+[2026-04-19 12:50:29] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:50:30] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:50:30] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:50:30] [INFO ] Waiting 10s...
+[2026-04-19 12:50:40] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:50:40] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:50:40] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:50:40] [INFO ] Waiting 10s...
+[2026-04-19 12:50:50] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:50:50] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:50:50] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:50:50] [INFO ] Waiting 10s...
+[2026-04-19 12:51:00] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:51:00] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:51:00] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:51:00] [INFO ] Waiting 10s...
+[2026-04-19 12:51:10] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:51:11] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:51:11] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:51:11] [INFO ] Waiting 10s...
+[2026-04-19 12:51:21] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:51:21] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:51:21] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:51:21] [INFO ] Waiting 10s...
+[2026-04-19 12:51:31] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:51:31] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:51:31] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:51:31] [INFO ] Waiting 10s...
+[2026-04-19 12:51:41] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:51:42] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:51:42] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:51:42] [INFO ] Waiting 10s...
+[2026-04-19 12:51:52] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:51:52] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:51:52] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:51:52] [INFO ] Waiting 10s...
+[2026-04-19 12:52:02] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:52:02] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:52:02] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:52:02] [INFO ] Waiting 10s...
+[2026-04-19 12:52:12] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:52:13] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:52:13] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:52:13] [INFO ] Waiting 10s...
+[2026-04-19 12:52:23] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:52:23] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:52:23] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:52:23] [INFO ] Waiting 10s...
+[2026-04-19 12:52:33] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:52:33] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:52:33] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:52:33] [INFO ] Waiting 10s...
+[2026-04-19 12:52:43] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:52:43] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:52:43] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:52:43] [INFO ] Waiting 10s...
+[2026-04-19 12:52:53] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:52:53] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:52:53] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:52:53] [INFO ] Waiting 10s...
+[2026-04-19 12:53:03] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:53:04] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:53:04] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:53:04] [INFO ] Waiting 10s...
+[2026-04-19 12:53:14] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:53:14] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:53:14] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:53:14] [INFO ] Waiting 10s...
+[2026-04-19 12:53:24] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:53:24] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:53:24] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:53:24] [INFO ] Waiting 10s...
+[2026-04-19 12:53:34] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:53:35] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:53:35] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:53:35] [INFO ] Waiting 10s...
+[2026-04-19 12:53:45] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:53:45] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:53:45] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:53:45] [INFO ] Waiting 10s...
+[2026-04-19 12:53:55] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:53:55] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:53:55] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:53:55] [INFO ] Waiting 10s...
+[2026-04-19 12:54:05] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:54:06] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:54:06] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:54:06] [INFO ] Waiting 10s...
+[2026-04-19 12:54:16] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:54:16] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:54:16] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:54:16] [INFO ] Waiting 10s...
+[2026-04-19 12:54:26] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:54:26] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:54:26] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:54:26] [INFO ] Waiting 10s...
+[2026-04-19 12:54:36] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:54:36] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:54:36] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:54:36] [INFO ] Waiting 10s...
+[2026-04-19 12:54:46] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:54:46] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:54:46] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:54:46] [INFO ] Waiting 10s...
+[2026-04-19 12:54:56] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:54:57] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:54:57] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:54:57] [INFO ] Waiting 10s...
+[2026-04-19 12:55:07] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:55:07] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:55:07] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:55:07] [INFO ] Waiting 10s...
+[2026-04-19 12:55:17] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:55:17] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:55:17] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:55:17] [INFO ] Waiting 10s...
+[2026-04-19 12:55:27] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:55:27] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:55:27] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:55:27] [INFO ] Waiting 10s...
+[2026-04-19 12:55:37] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:55:38] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:55:38] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:55:38] [INFO ] Waiting 10s...
+[2026-04-19 12:55:48] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:55:49] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:55:49] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:55:49] [INFO ] Waiting 10s...
+[2026-04-19 12:55:59] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:55:59] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:55:59] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:55:59] [INFO ] Waiting 10s...
+[2026-04-19 12:56:09] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:56:10] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:56:10] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:56:10] [INFO ] Waiting 10s...
+[2026-04-19 12:56:20] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:56:21] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:56:21] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:56:21] [INFO ] Waiting 10s...
+[2026-04-19 12:56:31] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:56:32] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:56:32] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:56:32] [INFO ] Waiting 10s...
+[2026-04-19 12:56:42] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:56:44] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:56:44] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:56:44] [INFO ] Waiting 10s...
+[2026-04-19 12:56:54] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:56:55] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:56:55] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:56:55] [INFO ] Waiting 10s...
+[2026-04-19 12:57:05] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:57:05] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:57:05] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:57:05] [INFO ] Waiting 10s...
+[2026-04-19 12:57:15] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:57:15] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:57:15] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:57:15] [INFO ] Waiting 10s...
+[2026-04-19 12:57:25] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:57:26] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:57:26] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:57:26] [INFO ] Waiting 10s...
+[2026-04-19 12:57:36] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:57:38] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:57:38] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:57:38] [INFO ] Waiting 10s...
+[2026-04-19 12:57:48] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:57:48] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:57:48] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:57:48] [INFO ] Waiting 10s...
+[2026-04-19 12:57:58] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:57:59] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:57:59] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:57:59] [INFO ] Waiting 10s...
+[2026-04-19 12:58:09] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:58:09] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:58:09] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:58:09] [INFO ] Waiting 10s...
+[2026-04-19 12:58:19] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:58:21] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:58:21] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:58:21] [INFO ] Waiting 10s...
+[2026-04-19 12:58:31] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:58:31] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:58:31] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:58:31] [INFO ] Waiting 10s...
+[2026-04-19 12:58:41] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:58:42] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:58:42] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:58:42] [INFO ] Waiting 10s...
+[2026-04-19 12:58:52] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:58:52] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:58:52] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:58:52] [INFO ] Waiting 10s...
+[2026-04-19 12:59:02] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:59:02] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:59:02] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:59:02] [INFO ] Waiting 10s...
+[2026-04-19 12:59:12] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:59:12] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:59:12] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:59:12] [INFO ] Waiting 10s...
+[2026-04-19 12:59:22] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:59:23] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:59:23] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:59:23] [INFO ] Waiting 10s...
+[2026-04-19 12:59:33] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:59:33] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:59:33] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:59:33] [INFO ] Waiting 10s...
+[2026-04-19 12:59:43] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:59:43] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:59:43] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:59:43] [INFO ] Waiting 10s...
+[2026-04-19 12:59:53] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 12:59:53] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 12:59:53] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 12:59:53] [INFO ] Waiting 10s...
+[2026-04-19 13:00:03] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:00:04] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:00:04] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:00:04] [INFO ] Waiting 10s...
+[2026-04-19 13:00:14] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:00:14] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:00:14] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:00:14] [INFO ] Waiting 10s...
+[2026-04-19 13:00:24] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:00:25] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:00:25] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:00:25] [INFO ] Waiting 10s...
+[2026-04-19 13:00:35] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:00:36] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:00:36] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:00:36] [INFO ] Waiting 10s...
+[2026-04-19 13:00:46] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:00:46] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:00:46] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:00:46] [INFO ] Waiting 10s...
+[2026-04-19 13:00:56] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:00:56] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:00:56] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:00:56] [INFO ] Waiting 10s...
+[2026-04-19 13:01:06] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:01:07] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:01:07] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:01:07] [INFO ] Waiting 10s...
+[2026-04-19 13:01:17] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:01:17] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:01:17] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:01:17] [INFO ] Waiting 10s...
+[2026-04-19 13:01:27] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:01:27] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:01:27] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:01:27] [INFO ] Waiting 10s...
+[2026-04-19 13:01:37] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:01:38] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:01:38] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:01:38] [INFO ] Waiting 10s...
+[2026-04-19 13:01:48] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:01:49] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:01:49] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:01:49] [INFO ] Waiting 10s...
+[2026-04-19 13:01:59] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:01:59] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:01:59] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:01:59] [INFO ] Waiting 10s...
+[2026-04-19 13:02:09] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:02:09] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:02:09] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:02:09] [INFO ] Waiting 10s...
+[2026-04-19 13:02:19] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:02:20] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:02:20] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:02:20] [INFO ] Waiting 10s...
+[2026-04-19 13:02:30] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:02:30] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:02:30] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:02:30] [INFO ] Waiting 10s...
+[2026-04-19 13:02:40] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:02:40] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:02:40] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:02:40] [INFO ] Waiting 10s...
+[2026-04-19 13:02:50] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:02:51] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:02:51] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:02:51] [INFO ] Waiting 10s...
+[2026-04-19 13:03:01] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:03:02] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:03:02] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:03:02] [INFO ] Waiting 10s...
+[2026-04-19 13:03:12] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:03:15] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:03:15] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:03:15] [INFO ] Waiting 10s...
+[2026-04-19 13:03:25] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:03:26] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:03:26] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:03:26] [INFO ] Waiting 10s...
+[2026-04-19 13:03:36] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:03:36] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:03:36] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:03:36] [INFO ] Waiting 10s...
+[2026-04-19 13:03:46] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:03:48] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:03:48] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:03:48] [INFO ] Waiting 10s...
+[2026-04-19 13:03:58] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:03:58] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:03:58] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:03:58] [INFO ] Waiting 10s...
+[2026-04-19 13:04:08] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:04:08] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:04:08] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:04:08] [INFO ] Waiting 10s...
+[2026-04-19 13:04:18] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:04:19] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:04:19] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:04:19] [INFO ] Waiting 10s...
+[2026-04-19 13:04:29] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:04:29] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:04:29] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:04:29] [INFO ] Waiting 10s...
+[2026-04-19 13:04:39] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:04:40] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:04:40] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:04:40] [INFO ] Waiting 10s...
+[2026-04-19 13:04:50] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:04:50] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:04:50] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:04:50] [INFO ] Waiting 10s...
+[2026-04-19 13:05:00] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:05:01] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:05:01] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:05:01] [INFO ] Waiting 10s...
+[2026-04-19 13:05:11] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:05:11] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:05:11] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:05:11] [INFO ] Waiting 10s...
+[2026-04-19 13:05:21] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:05:22] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:05:22] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:05:22] [INFO ] Waiting 10s...
+[2026-04-19 13:05:32] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:05:32] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:05:32] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:05:32] [INFO ] Waiting 10s...
+[2026-04-19 13:05:42] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:05:43] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:05:43] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:05:43] [INFO ] Waiting 10s...
+[2026-04-19 13:05:53] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:05:54] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:05:54] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:05:54] [INFO ] Waiting 10s...
+[2026-04-19 13:06:04] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:06:05] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:06:05] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:06:05] [INFO ] Waiting 10s...
+[2026-04-19 13:06:15] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:06:16] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:06:16] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:06:16] [INFO ] Waiting 10s...
+[2026-04-19 13:06:26] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:06:26] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:06:26] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:06:26] [INFO ] Waiting 10s...
+[2026-04-19 13:06:36] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:06:36] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:06:36] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:06:36] [INFO ] Waiting 10s...
+[2026-04-19 13:06:46] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:06:47] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:06:47] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:06:47] [INFO ] Waiting 10s...
+[2026-04-19 13:06:57] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:06:57] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:06:57] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:06:57] [INFO ] Waiting 10s...
+[2026-04-19 13:07:07] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:07:07] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:07:07] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:07:07] [INFO ] Waiting 10s...
+[2026-04-19 13:07:17] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:07:20] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:07:20] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:07:20] [INFO ] Waiting 10s...
+[2026-04-19 13:07:30] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:07:31] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:07:31] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:07:31] [INFO ] Waiting 10s...
+[2026-04-19 13:07:41] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:07:41] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:07:41] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:07:41] [INFO ] Waiting 10s...
+[2026-04-19 13:07:51] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:07:52] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:07:52] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:07:52] [INFO ] Waiting 10s...
+[2026-04-19 13:08:02] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:08:02] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:08:02] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:08:02] [INFO ] Waiting 10s...
+[2026-04-19 13:08:12] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:08:12] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:08:12] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:08:12] [INFO ] Waiting 10s...
+[2026-04-19 13:08:22] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:08:23] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:08:23] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:08:23] [INFO ] Waiting 10s...
+[2026-04-19 13:08:33] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:08:33] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:08:33] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:08:33] [INFO ] Waiting 10s...
+[2026-04-19 13:08:43] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:08:43] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:08:43] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:08:43] [INFO ] Waiting 10s...
+[2026-04-19 13:08:54] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:08:54] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:08:54] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:08:54] [INFO ] Waiting 10s...
+[2026-04-19 13:09:04] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:09:04] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:09:04] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:09:04] [INFO ] Waiting 10s...
+[2026-04-19 13:09:14] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:09:15] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:09:15] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:09:15] [INFO ] Waiting 10s...
+[2026-04-19 13:09:25] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:09:25] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:09:25] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:09:25] [INFO ] Waiting 10s...
+[2026-04-19 13:09:35] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:09:35] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:09:35] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:09:35] [INFO ] Waiting 10s...
+[2026-04-19 13:09:45] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:09:45] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:09:45] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:09:45] [INFO ] Waiting 10s...
+[2026-04-19 13:09:55] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:09:57] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:09:57] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:09:57] [INFO ] Waiting 10s...
+[2026-04-19 13:10:07] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:10:08] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:10:08] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:10:08] [INFO ] Waiting 10s...
+[2026-04-19 13:10:18] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:10:18] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:10:18] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:10:18] [INFO ] Waiting 10s...
+[2026-04-19 13:10:28] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:10:28] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:10:28] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:10:28] [INFO ] Waiting 10s...
+[2026-04-19 13:10:38] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:10:38] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:10:38] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:10:38] [INFO ] Waiting 10s...
+[2026-04-19 13:10:48] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:10:49] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:10:49] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:10:49] [INFO ] Waiting 10s...
+[2026-04-19 13:10:59] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:10:59] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:10:59] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:10:59] [INFO ] Waiting 10s...
+[2026-04-19 13:11:09] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:11:09] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:11:09] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:11:09] [INFO ] Waiting 10s...
+[2026-04-19 13:11:19] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:11:19] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:11:19] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:11:19] [INFO ] Waiting 10s...
+[2026-04-19 13:11:29] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:11:31] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:11:31] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:11:31] [INFO ] Waiting 10s...
+[2026-04-19 13:11:41] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:11:41] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:11:41] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:11:41] [INFO ] Waiting 10s...
+[2026-04-19 13:11:51] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:11:53] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:11:53] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:11:53] [INFO ] Waiting 10s...
+[2026-04-19 13:12:03] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:12:04] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:12:04] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:12:04] [INFO ] Waiting 10s...
+[2026-04-19 13:12:14] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:12:14] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:12:14] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:12:14] [INFO ] Waiting 10s...
+[2026-04-19 13:12:24] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:12:25] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:12:25] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:12:25] [INFO ] Waiting 10s...
+[2026-04-19 13:12:35] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:12:35] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:12:35] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:12:35] [INFO ] Waiting 10s...
+[2026-04-19 13:12:45] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:12:45] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:12:45] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:12:45] [INFO ] Waiting 10s...
+[2026-04-19 13:12:55] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:12:56] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:12:56] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:12:56] [INFO ] Waiting 10s...
+[2026-04-19 13:13:06] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:13:06] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:13:06] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:13:06] [INFO ] Waiting 10s...
+[2026-04-19 13:13:16] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:13:16] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:13:16] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:13:16] [INFO ] Waiting 10s...
+[2026-04-19 13:13:26] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:13:26] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:13:26] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:13:26] [INFO ] Waiting 10s...
+[2026-04-19 13:13:36] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:13:37] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:13:37] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:13:37] [INFO ] Waiting 10s...
+[2026-04-19 13:13:47] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:13:47] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:13:47] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:13:47] [INFO ] Waiting 10s...
+[2026-04-19 13:13:57] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:13:58] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:13:58] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:13:58] [INFO ] Waiting 10s...
+[2026-04-19 13:14:08] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:14:09] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:14:09] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:14:09] [INFO ] Waiting 10s...
+[2026-04-19 13:14:19] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:14:20] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:14:20] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:14:20] [INFO ] Waiting 10s...
+[2026-04-19 13:14:30] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:14:31] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:14:31] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:14:31] [INFO ] Waiting 10s...
+[2026-04-19 13:14:41] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:14:41] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:14:41] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:14:41] [INFO ] Waiting 10s...
+[2026-04-19 13:14:51] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:14:51] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:14:51] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:14:51] [INFO ] Waiting 10s...
+[2026-04-19 13:15:01] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:15:01] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:15:01] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:15:01] [INFO ] Waiting 10s...
+[2026-04-19 13:15:11] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:15:12] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:15:12] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:15:12] [INFO ] Waiting 10s...
+[2026-04-19 13:15:22] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:15:22] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:15:22] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:15:22] [INFO ] Waiting 10s...
+[2026-04-19 13:15:32] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:15:32] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:15:32] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:15:32] [INFO ] Waiting 10s...
+[2026-04-19 13:15:42] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:15:43] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:15:43] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:15:43] [INFO ] Waiting 10s...
+[2026-04-19 13:15:53] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:15:54] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:15:54] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:15:54] [INFO ] Waiting 10s...
+[2026-04-19 13:16:04] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:16:05] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:16:05] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:16:05] [INFO ] Waiting 10s...
+[2026-04-19 13:16:15] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:16:15] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:16:15] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:16:15] [INFO ] Waiting 10s...
+[2026-04-19 13:16:25] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:16:25] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:16:25] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:16:25] [INFO ] Waiting 10s...
+[2026-04-19 13:16:35] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:16:36] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:16:36] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:16:36] [INFO ] Waiting 10s...
+[2026-04-19 13:16:46] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:16:46] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:16:46] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:16:46] [INFO ] Waiting 10s...
+[2026-04-19 13:16:56] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:16:56] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:16:56] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:16:56] [INFO ] Waiting 10s...
+[2026-04-19 13:17:06] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:17:07] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:17:07] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:17:07] [INFO ] Waiting 10s...
+[2026-04-19 13:17:17] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:17:17] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:17:17] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:17:17] [INFO ] Waiting 10s...
+[2026-04-19 13:17:27] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:17:28] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:17:28] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:17:28] [INFO ] Waiting 10s...
+[2026-04-19 13:17:38] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:17:41] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:17:41] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:17:41] [INFO ] Waiting 10s...
+[2026-04-19 13:17:51] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:17:51] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:17:51] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:17:51] [INFO ] Waiting 10s...
+[2026-04-19 13:18:01] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:18:02] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:18:02] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:18:02] [INFO ] Waiting 10s...
+[2026-04-19 13:18:12] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:18:13] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:18:13] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:18:13] [INFO ] Waiting 10s...
+[2026-04-19 13:18:23] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:18:23] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:18:23] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:18:23] [INFO ] Waiting 10s...
+[2026-04-19 13:18:33] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:18:33] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:18:33] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:18:33] [INFO ] Waiting 10s...
+[2026-04-19 13:18:43] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:18:44] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:18:44] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:18:44] [INFO ] Waiting 10s...
+[2026-04-19 13:18:54] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:18:59] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:18:59] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:18:59] [INFO ] Waiting 10s...
+[2026-04-19 13:19:09] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:19:09] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:19:09] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:19:09] [INFO ] Waiting 10s...
+[2026-04-19 13:19:19] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:19:19] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:19:19] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:19:19] [INFO ] Waiting 10s...
+[2026-04-19 13:19:29] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:19:30] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:19:30] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:19:30] [INFO ] Waiting 10s...
+[2026-04-19 13:19:40] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:19:40] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:19:40] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:19:40] [INFO ] Waiting 10s...
+[2026-04-19 13:19:50] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:19:50] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:19:50] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:19:50] [INFO ] Waiting 10s...
+[2026-04-19 13:20:00] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:20:01] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:20:01] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:20:01] [INFO ] Waiting 10s...
+[2026-04-19 13:20:11] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:20:11] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:20:11] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:20:11] [INFO ] Waiting 10s...
+[2026-04-19 13:20:22] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:20:22] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:20:22] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:20:22] [INFO ] Waiting 10s...
+[2026-04-19 13:20:32] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:20:33] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:20:33] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:20:33] [INFO ] Waiting 10s...
+[2026-04-19 13:20:43] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:20:43] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:20:43] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:20:43] [INFO ] Waiting 10s...
+[2026-04-19 13:20:53] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:20:53] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:20:53] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:20:53] [INFO ] Waiting 10s...
+[2026-04-19 13:21:03] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:21:03] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:21:03] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:21:03] [INFO ] Waiting 10s...
+[2026-04-19 13:21:13] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:21:14] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:21:14] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:21:14] [INFO ] Waiting 10s...
+[2026-04-19 13:21:24] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 13:21:24] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 13:21:24] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 13:21:24] [INFO ] Waiting 10s...
+[2026-04-19 13:21:35] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-19 19:49:18] [POLL ] No new events from 192.168.0.200
+[2026-04-19 19:49:18] [INFO ] Waiting 10s...
+[2026-04-19 19:49:28] [POLL ] Polling 192.168.0.200 from 2026-04-19T18:20:16+06:00
+[2026-04-19 19:49:28] [POLL ] 3 event(s) received from 192.168.0.200
+[2026-04-19 19:49:28] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 19:49:28] [INFO ] Waiting 10s...
+[2026-04-19 19:49:38] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+[2026-04-19 19:49:39] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 19:49:39] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 19:49:39] [INFO ] Waiting 10s...
+[2026-04-19 19:49:49] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+[2026-04-19 19:49:49] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 19:49:49] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 19:49:49] [INFO ] Waiting 10s...
+[2026-04-19 19:49:59] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+[2026-04-19 19:49:59] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 19:49:59] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 19:49:59] [INFO ] Waiting 10s...
+[2026-04-19 19:50:09] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+[2026-04-19 19:50:09] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 19:50:09] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 19:50:09] [INFO ] Waiting 10s...
+[2026-04-19 19:50:19] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+[2026-04-19 19:50:20] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 19:50:20] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 19:50:20] [INFO ] Waiting 10s...
+[2026-04-19 19:50:30] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+[2026-04-19 19:50:30] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 19:50:30] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 19:50:30] [INFO ] Waiting 10s...
+[2026-04-19 19:50:40] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+[2026-04-19 19:50:40] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 19:50:40] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 19:50:40] [INFO ] Waiting 10s...
+[2026-04-19 19:50:50] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+[2026-04-19 19:50:50] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-19 19:50:50] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-19 19:50:50] [INFO ] Waiting 10s...
+[CRASH] Script stopped at Mon 04/20/2026  1:50:58.04 
+[START] System initiated at Mon 04/20/2026 10:04:59.80 
+◇ injected env (4) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+[2026-04-20 04:05:11] [INFO ] ==============================================
+[2026-04-20 04:05:11] [INFO ]   Hikvision Attendance System — Node.js v5
+[2026-04-20 04:05:11] [INFO ]   1. Checkpoint   — incremental device fetch
+[2026-04-20 04:05:11] [INFO ]   2. State machine — PENDING → SYNCED
+[2026-04-20 04:05:11] [INFO ]   3. Anti-flood    — batch sync (100/cycle)
+[2026-04-20 04:05:11] [INFO ]   4. Positive ACK  — confirmed 200/201 only
+[2026-04-20 04:05:11] [INFO ]   5. Watchdog      — HTTP error logging
+[2026-04-20 04:05:11] [INFO ]   API: http://138.252.15.101:4000/api/attlog
+[2026-04-20 04:05:11] [INFO ] ==============================================
+[2026-04-20 04:05:11] [INFO ] SQLite stats — Total: 20 | Pending: 0 | Synced: 20 | Failed: 0
+[2026-04-20 04:05:11] [INFO ] Loaded 1 terminal(s):
+[2026-04-20 04:05:11] [INFO ]   → 192.168.0.200 | Main Entrance | checkpoint: 2026-04-19T21:30:33+06:00
+[2026-04-20 04:05:11] [INFO ] HRMS API reachable — starting poll loop
+[2026-04-20 04:05:11] [INFO ] ----------------------------------------------
+[2026-04-20 04:05:11] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:05:19] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:05:19] [INFO ] Waiting 10s...
+[2026-04-20 04:05:30] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:05:38] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:05:38] [INFO ] Waiting 10s...
+[2026-04-20 04:05:48] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:05:56] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:05:56] [INFO ] Waiting 10s...
+[2026-04-20 04:06:06] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:06:14] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:06:14] [INFO ] Waiting 10s...
+[2026-04-20 04:06:24] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:06:32] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:06:32] [INFO ] Waiting 10s...
+[2026-04-20 04:06:42] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:06:50] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:06:50] [INFO ] Waiting 10s...
+[2026-04-20 04:07:00] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:07:08] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:07:08] [INFO ] Waiting 10s...
+[2026-04-20 04:07:18] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:07:26] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:07:26] [INFO ] Waiting 10s...
+[2026-04-20 04:07:36] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:07:44] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:07:44] [INFO ] Waiting 10s...
+[2026-04-20 04:07:54] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:08:02] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:08:02] [INFO ] Waiting 10s...
+[2026-04-20 04:08:12] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:08:20] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:08:20] [INFO ] Waiting 10s...
+[2026-04-20 04:08:30] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:08:38] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:08:38] [INFO ] Waiting 10s...
+[2026-04-20 04:08:48] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:08:56] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:08:56] [INFO ] Waiting 10s...
+[2026-04-20 04:09:06] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:09:14] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:09:14] [INFO ] Waiting 10s...
+[2026-04-20 04:09:24] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:09:32] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:09:32] [INFO ] Waiting 10s...
+[2026-04-20 04:09:42] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:09:50] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:09:50] [INFO ] Waiting 10s...
+[2026-04-20 04:10:00] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:10:08] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:10:08] [INFO ] Waiting 10s...
+[2026-04-20 04:10:18] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:10:26] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:10:26] [INFO ] Waiting 10s...
+[2026-04-20 04:10:36] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:10:44] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:10:44] [INFO ] Waiting 10s...
+[2026-04-20 04:10:54] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:11:02] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:11:02] [INFO ] Waiting 10s...
+[2026-04-20 04:11:12] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:11:20] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:11:20] [INFO ] Waiting 10s...
+[2026-04-20 04:11:30] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:11:38] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:11:38] [INFO ] Waiting 10s...
+[2026-04-20 04:11:48] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:11:56] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:11:56] [INFO ] Waiting 10s...
+[2026-04-20 04:12:06] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:12:14] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:12:14] [INFO ] Waiting 10s...
+[2026-04-20 04:12:24] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:12:32] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:12:32] [INFO ] Waiting 10s...
+[2026-04-20 04:12:42] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:12:50] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:12:50] [INFO ] Waiting 10s...
+[2026-04-20 04:13:00] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:13:08] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:13:08] [INFO ] Waiting 10s...
+[2026-04-20 04:13:18] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:13:26] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:13:26] [INFO ] Waiting 10s...
+[2026-04-20 04:13:36] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:13:44] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:13:44] [INFO ] Waiting 10s...
+[2026-04-20 04:13:54] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:14:02] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:14:02] [INFO ] Waiting 10s...
+[2026-04-20 04:14:12] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:14:20] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:14:20] [INFO ] Waiting 10s...
+[2026-04-20 04:14:30] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:14:38] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:14:38] [INFO ] Waiting 10s...
+[2026-04-20 04:14:48] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:14:56] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:14:56] [INFO ] Waiting 10s...
+[2026-04-20 04:15:06] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:15:14] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:15:14] [INFO ] Waiting 10s...
+[2026-04-20 04:15:24] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:15:32] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:15:32] [INFO ] Waiting 10s...
+[2026-04-20 04:15:42] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:15:50] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:15:50] [INFO ] Waiting 10s...
+[2026-04-20 04:16:00] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:16:08] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:16:08] [INFO ] Waiting 10s...
+[2026-04-20 04:16:18] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:16:26] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:16:26] [INFO ] Waiting 10s...
+[2026-04-20 04:16:36] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:16:44] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:16:44] [INFO ] Waiting 10s...
+[2026-04-20 04:16:54] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:17:02] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:17:02] [INFO ] Waiting 10s...
+[2026-04-20 04:17:12] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:17:20] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:17:20] [INFO ] Waiting 10s...
+[2026-04-20 04:17:30] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:17:38] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:17:38] [INFO ] Waiting 10s...
+[2026-04-20 04:17:48] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:17:56] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:17:56] [INFO ] Waiting 10s...
+[2026-04-20 04:18:06] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:18:14] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:18:14] [INFO ] Waiting 10s...
+[2026-04-20 04:18:24] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:18:32] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:18:32] [INFO ] Waiting 10s...
+[2026-04-20 04:18:42] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:18:50] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:18:50] [INFO ] Waiting 10s...
+[2026-04-20 04:19:00] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:19:08] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:19:08] [INFO ] Waiting 10s...
+[2026-04-20 04:19:18] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:19:26] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:19:26] [INFO ] Waiting 10s...
+[2026-04-20 04:19:36] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:19:44] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:19:44] [INFO ] Waiting 10s...
+[2026-04-20 04:19:54] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:20:02] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:20:02] [INFO ] Waiting 10s...
+[2026-04-20 04:20:12] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:20:20] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:20:20] [INFO ] Waiting 10s...
+[2026-04-20 04:20:30] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:20:38] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:20:38] [INFO ] Waiting 10s...
+[2026-04-20 04:20:48] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:20:56] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:20:56] [INFO ] Waiting 10s...
+[2026-04-20 04:21:07] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:21:15] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:21:15] [INFO ] Waiting 10s...
+[2026-04-20 04:21:25] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:21:33] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:21:33] [INFO ] Waiting 10s...
+[2026-04-20 04:21:43] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:21:51] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:21:51] [INFO ] Waiting 10s...
+[2026-04-20 04:22:01] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:22:09] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:22:09] [INFO ] Waiting 10s...
+[2026-04-20 04:22:19] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:22:27] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:22:27] [INFO ] Waiting 10s...
+[2026-04-20 04:22:37] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:22:45] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:22:45] [INFO ] Waiting 10s...
+[2026-04-20 04:22:55] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:23:03] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:23:03] [INFO ] Waiting 10s...
+[2026-04-20 04:23:13] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:23:21] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:23:21] [INFO ] Waiting 10s...
+[2026-04-20 04:23:31] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:23:39] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:23:39] [INFO ] Waiting 10s...
+[2026-04-20 04:23:49] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:23:57] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:23:57] [INFO ] Waiting 10s...
+[2026-04-20 04:24:07] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:24:15] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:24:15] [INFO ] Waiting 10s...
+[2026-04-20 04:24:25] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:24:33] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:24:33] [INFO ] Waiting 10s...
+[2026-04-20 04:24:43] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:24:51] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:24:51] [INFO ] Waiting 10s...
+[2026-04-20 04:25:01] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:25:09] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:25:09] [INFO ] Waiting 10s...
+[2026-04-20 04:25:19] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:25:27] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:25:27] [INFO ] Waiting 10s...
+[2026-04-20 04:25:37] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:25:45] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:25:45] [INFO ] Waiting 10s...
+[2026-04-20 04:25:55] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:26:03] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:26:03] [INFO ] Waiting 10s...
+[2026-04-20 04:26:13] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:26:21] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:26:21] [INFO ] Waiting 10s...
+[2026-04-20 04:26:31] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:26:39] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:26:39] [INFO ] Waiting 10s...
+[2026-04-20 04:26:49] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:26:57] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:26:57] [INFO ] Waiting 10s...
+[2026-04-20 04:27:07] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:27:15] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:27:15] [INFO ] Waiting 10s...
+[2026-04-20 04:27:25] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:27:33] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:27:33] [INFO ] Waiting 10s...
+[2026-04-20 04:27:43] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:27:51] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:27:51] [INFO ] Waiting 10s...
+[2026-04-20 04:28:01] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:28:09] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:28:09] [INFO ] Waiting 10s...
+[2026-04-20 04:28:19] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:28:27] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:28:27] [INFO ] Waiting 10s...
+[2026-04-20 04:28:37] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:28:45] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:28:45] [INFO ] Waiting 10s...
+[2026-04-20 04:28:55] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:29:03] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:29:03] [INFO ] Waiting 10s...
+[2026-04-20 04:29:13] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:29:21] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:29:21] [INFO ] Waiting 10s...
+[2026-04-20 04:29:31] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+  [API ERROR] Could not reach device http://192.168.0.200/ISAPI/AccessControl/AcsEvent?format=json — timeout of 8000ms exceeded
+[2026-04-20 04:29:39] [POLL ] No new events from 192.168.0.200
+[2026-04-20 04:29:39] [INFO ] Waiting 10s...
+[2026-04-20 04:29:49] [POLL ] Polling 192.168.0.200 from 2026-04-19T21:30:33+06:00
+[2026-04-20 04:29:50] [POLL ] 3 event(s) received from 192.168.0.200
+[2026-04-20 04:29:50] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:29:50] [INFO ] Waiting 10s...
+[2026-04-20 04:30:00] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:30:49+06:00
+[2026-04-20 04:30:00] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:30:00] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:30:00] [INFO ] Waiting 10s...
+[2026-04-20 04:30:10] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:30:49+06:00
+[2026-04-20 04:30:10] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:30:10] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:30:10] [INFO ] Waiting 10s...
+[2026-04-20 04:30:20] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:30:49+06:00
+[2026-04-20 04:30:21] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:30:21] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:30:21] [INFO ] Waiting 10s...
+[2026-04-20 04:30:31] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:30:49+06:00
+[2026-04-20 04:30:31] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:30:31] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:30:31] [INFO ] Waiting 10s...
+[2026-04-20 04:30:41] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:30:49+06:00
+[2026-04-20 04:30:41] [POLL ] 4 event(s) received from 192.168.0.200
+[2026-04-20 04:30:41] [INFO ] Saved 1 punch(es) as PENDING from 192.168.0.200
+[2026-04-20 04:30:41] [INFO ] Waiting 10s...
+[2026-04-20 04:30:51] [SYNC ] Syncing 1 PENDING record(s) to HRMS...
+[2026-04-20 04:30:51] [SYNC ] Batch complete — 1 synced, 0 failed
+[2026-04-20 04:30:51] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:43+06:00
+[2026-04-20 04:30:52] [POLL ] 3 event(s) received from 192.168.0.200
+[2026-04-20 04:30:52] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:30:52] [INFO ] Waiting 10s...
+[2026-04-20 04:31:02] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:31:02] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:31:02] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:31:02] [INFO ] Waiting 10s...
+[2026-04-20 04:31:12] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:31:12] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:31:12] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:31:12] [INFO ] Waiting 10s...
+[2026-04-20 04:31:22] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:31:22] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:31:22] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:31:22] [INFO ] Waiting 10s...
+[2026-04-20 04:31:32] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:31:32] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:31:32] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:31:32] [INFO ] Waiting 10s...
+[2026-04-20 04:31:42] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:31:42] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:31:42] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:31:42] [INFO ] Waiting 10s...
+[2026-04-20 04:31:52] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:31:53] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:31:53] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:31:53] [INFO ] Waiting 10s...
+[2026-04-20 04:32:03] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:32:03] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:32:03] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:32:03] [INFO ] Waiting 10s...
+[2026-04-20 04:32:13] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:32:14] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:32:14] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:32:14] [INFO ] Waiting 10s...
+[2026-04-20 04:32:24] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:32:24] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:32:24] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:32:24] [INFO ] Waiting 10s...
+[2026-04-20 04:32:34] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:32:34] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:32:34] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:32:34] [INFO ] Waiting 10s...
+[2026-04-20 04:32:44] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:32:44] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:32:44] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:32:44] [INFO ] Waiting 10s...
+[2026-04-20 04:32:54] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:32:54] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:32:54] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:32:54] [INFO ] Waiting 10s...
+[2026-04-20 04:33:04] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:33:04] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:33:04] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:33:04] [INFO ] Waiting 10s...
+[2026-04-20 04:33:14] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:33:14] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:33:14] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:33:14] [INFO ] Waiting 10s...
+[2026-04-20 04:33:25] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:33:25] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:33:25] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:33:25] [INFO ] Waiting 10s...
+[2026-04-20 04:33:35] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:33:35] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:33:35] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:33:35] [INFO ] Waiting 10s...
+[2026-04-20 04:33:45] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:33:45] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:33:45] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:33:45] [INFO ] Waiting 10s...
+[2026-04-20 04:33:55] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:33:55] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:33:55] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:33:55] [INFO ] Waiting 10s...
+[2026-04-20 04:34:05] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:34:07] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:34:07] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:34:07] [INFO ] Waiting 10s...
+[2026-04-20 04:34:17] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:34:17] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:34:17] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:34:17] [INFO ] Waiting 10s...
+[2026-04-20 04:34:27] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:34:28] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:34:28] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:34:28] [INFO ] Waiting 10s...
+[2026-04-20 04:34:38] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:34:38] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:34:38] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:34:38] [INFO ] Waiting 10s...
+[2026-04-20 04:34:48] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:34:50] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:34:50] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:34:50] [INFO ] Waiting 10s...
+[2026-04-20 04:35:00] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:35:02] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:35:02] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:35:02] [INFO ] Waiting 10s...
+[2026-04-20 04:35:12] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:35:13] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:35:13] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:35:13] [INFO ] Waiting 10s...
+[2026-04-20 04:35:23] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:35:23] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:35:23] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:35:23] [INFO ] Waiting 10s...
+[2026-04-20 04:35:33] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:35:33] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:35:33] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:35:33] [INFO ] Waiting 10s...
+[2026-04-20 04:35:43] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:35:43] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:35:43] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:35:43] [INFO ] Waiting 10s...
+[2026-04-20 04:35:53] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:35:53] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:35:53] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:35:53] [INFO ] Waiting 10s...
+[2026-04-20 04:36:03] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:36:03] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:36:03] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:36:03] [INFO ] Waiting 10s...
+[2026-04-20 04:36:13] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:36:14] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:36:14] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:36:14] [INFO ] Waiting 10s...
+[2026-04-20 04:36:24] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:36:24] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:36:24] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:36:24] [INFO ] Waiting 10s...
+[2026-04-20 04:36:34] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:36:34] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:36:34] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:36:34] [INFO ] Waiting 10s...
+[2026-04-20 04:36:44] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:36:44] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:36:44] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:36:44] [INFO ] Waiting 10s...
+[2026-04-20 04:36:54] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:36:54] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:36:54] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:36:54] [INFO ] Waiting 10s...
+[2026-04-20 04:37:04] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:37:04] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:37:04] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:37:04] [INFO ] Waiting 10s...
+[2026-04-20 04:37:14] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:37:15] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:37:15] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:37:15] [INFO ] Waiting 10s...
+[2026-04-20 04:37:25] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:37:25] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:37:25] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:37:25] [INFO ] Waiting 10s...
+[2026-04-20 04:37:35] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:37:35] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:37:35] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:37:35] [INFO ] Waiting 10s...
+[2026-04-20 04:37:45] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:37:45] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:37:45] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:37:45] [INFO ] Waiting 10s...
+[2026-04-20 04:37:55] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:37:55] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:37:55] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:37:55] [INFO ] Waiting 10s...
+[2026-04-20 04:38:05] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:38:05] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:38:05] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:38:05] [INFO ] Waiting 10s...
+[2026-04-20 04:38:15] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:38:16] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:38:16] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:38:16] [INFO ] Waiting 10s...
+[2026-04-20 04:38:26] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:38:26] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:38:26] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:38:26] [INFO ] Waiting 10s...
+[2026-04-20 04:38:36] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:38:36] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:38:36] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:38:36] [INFO ] Waiting 10s...
+[2026-04-20 04:38:46] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:38:46] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:38:46] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:38:46] [INFO ] Waiting 10s...
+[2026-04-20 04:38:56] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:38:56] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:38:56] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:38:56] [INFO ] Waiting 10s...
+[2026-04-20 04:39:06] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:39:07] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:39:07] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:39:07] [INFO ] Waiting 10s...
+[2026-04-20 04:39:17] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:39:17] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:39:17] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:39:17] [INFO ] Waiting 10s...
+[2026-04-20 04:39:27] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:39:27] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:39:27] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:39:27] [INFO ] Waiting 10s...
+[2026-04-20 04:39:37] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:39:37] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:39:37] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:39:37] [INFO ] Waiting 10s...
+[2026-04-20 04:39:47] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:39:47] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:39:47] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:39:47] [INFO ] Waiting 10s...
+[2026-04-20 04:39:57] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:39:58] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:39:58] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:39:58] [INFO ] Waiting 10s...
+[2026-04-20 04:40:08] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:40:08] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:40:08] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:40:08] [INFO ] Waiting 10s...
+[2026-04-20 04:40:18] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:40:18] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:40:18] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:40:18] [INFO ] Waiting 10s...
+[2026-04-20 04:40:28] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:40:28] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:40:28] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:40:28] [INFO ] Waiting 10s...
+[2026-04-20 04:40:38] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:40:38] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:40:38] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:40:38] [INFO ] Waiting 10s...
+[2026-04-20 04:40:48] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:40:48] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:40:48] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:40:48] [INFO ] Waiting 10s...
+[2026-04-20 04:40:58] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:40:59] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:40:59] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:40:59] [INFO ] Waiting 10s...
+[2026-04-20 04:41:09] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:41:09] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:41:09] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:41:09] [INFO ] Waiting 10s...
+[2026-04-20 04:41:19] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:41:19] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:41:19] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:41:19] [INFO ] Waiting 10s...
+[2026-04-20 04:41:29] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:41:29] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:41:29] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:41:29] [INFO ] Waiting 10s...
+[2026-04-20 04:41:39] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:41:39] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:41:39] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:41:39] [INFO ] Waiting 10s...
+[2026-04-20 04:41:49] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:41:50] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:41:50] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:41:50] [INFO ] Waiting 10s...
+[2026-04-20 04:42:00] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:42:00] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:42:00] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:42:00] [INFO ] Waiting 10s...
+[2026-04-20 04:42:10] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:42:10] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:42:10] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:42:10] [INFO ] Waiting 10s...
+[2026-04-20 04:42:20] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:42:20] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:42:20] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:42:20] [INFO ] Waiting 10s...
+[2026-04-20 04:42:30] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:42:30] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:42:30] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:42:30] [INFO ] Waiting 10s...
+[2026-04-20 04:42:40] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:42:40] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:42:40] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:42:40] [INFO ] Waiting 10s...
+[2026-04-20 04:42:50] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:42:51] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:42:51] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:42:51] [INFO ] Waiting 10s...
+[2026-04-20 04:43:01] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:43:01] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:43:01] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:43:01] [INFO ] Waiting 10s...
+[2026-04-20 04:43:11] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:43:11] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:43:11] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:43:11] [INFO ] Waiting 10s...
+[2026-04-20 04:43:21] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:43:21] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:43:21] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:43:21] [INFO ] Waiting 10s...
+[2026-04-20 04:43:31] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:43:31] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:43:31] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:43:31] [INFO ] Waiting 10s...
+[2026-04-20 04:43:41] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:43:42] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:43:42] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:43:42] [INFO ] Waiting 10s...
+[2026-04-20 04:43:52] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:43:52] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:43:52] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:43:52] [INFO ] Waiting 10s...
+[2026-04-20 04:44:02] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:44:02] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:44:02] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:44:02] [INFO ] Waiting 10s...
+[2026-04-20 04:44:12] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:44:12] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:44:13] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:44:13] [INFO ] Waiting 10s...
+[2026-04-20 04:44:23] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:44:23] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:44:23] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:44:23] [INFO ] Waiting 10s...
+[2026-04-20 04:44:33] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:44:33] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:44:33] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:44:33] [INFO ] Waiting 10s...
+[2026-04-20 04:44:43] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:44:43] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:44:43] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:44:43] [INFO ] Waiting 10s...
+[2026-04-20 04:44:53] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:44:53] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:44:53] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:44:53] [INFO ] Waiting 10s...
+[2026-04-20 04:45:03] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:45:04] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:45:04] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:45:04] [INFO ] Waiting 10s...
+[2026-04-20 04:45:14] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:45:14] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:45:14] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:45:14] [INFO ] Waiting 10s...
+[2026-04-20 04:45:24] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:45:24] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:45:24] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:45:24] [INFO ] Waiting 10s...
+[2026-04-20 04:45:34] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:45:34] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:45:34] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:45:34] [INFO ] Waiting 10s...
+[2026-04-20 04:45:44] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:45:44] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:45:44] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:45:44] [INFO ] Waiting 10s...
+[2026-04-20 04:45:54] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:45:55] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:45:55] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:45:55] [INFO ] Waiting 10s...
+[2026-04-20 04:46:05] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:46:05] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:46:05] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:46:05] [INFO ] Waiting 10s...
+[2026-04-20 04:46:15] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:46:15] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:46:15] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:46:15] [INFO ] Waiting 10s...
+[2026-04-20 04:46:25] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:46:25] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:46:25] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:46:25] [INFO ] Waiting 10s...
+[2026-04-20 04:46:35] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:46:35] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:46:35] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:46:35] [INFO ] Waiting 10s...
+[2026-04-20 04:46:45] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:46:46] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:46:46] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:46:46] [INFO ] Waiting 10s...
+[2026-04-20 04:46:56] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:46:56] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:46:56] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:46:56] [INFO ] Waiting 10s...
+[2026-04-20 04:47:06] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:47:06] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:47:06] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:47:06] [INFO ] Waiting 10s...
+[2026-04-20 04:47:16] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:47:16] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:47:16] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:47:16] [INFO ] Waiting 10s...
+[2026-04-20 04:47:26] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:47:27] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:47:27] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:47:27] [INFO ] Waiting 10s...
+[2026-04-20 04:47:37] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:47:37] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:47:37] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:47:37] [INFO ] Waiting 10s...
+[2026-04-20 04:47:47] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:47:47] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:47:47] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:47:47] [INFO ] Waiting 10s...
+[2026-04-20 04:47:57] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:47:57] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:47:57] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:47:57] [INFO ] Waiting 10s...
+[2026-04-20 04:48:07] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:48:08] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:48:08] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:48:08] [INFO ] Waiting 10s...
+[2026-04-20 04:48:18] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:48:18] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:48:18] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:48:18] [INFO ] Waiting 10s...
+[2026-04-20 04:48:28] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:48:28] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:48:28] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:48:28] [INFO ] Waiting 10s...
+[2026-04-20 04:48:38] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:48:38] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:48:38] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:48:38] [INFO ] Waiting 10s...
+[2026-04-20 04:48:48] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:48:49] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:48:49] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:48:49] [INFO ] Waiting 10s...
+[2026-04-20 04:48:59] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:48:59] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:48:59] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:48:59] [INFO ] Waiting 10s...
+[2026-04-20 04:49:09] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:49:09] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:49:09] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:49:09] [INFO ] Waiting 10s...
+[2026-04-20 04:49:19] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:49:19] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:49:19] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:49:19] [INFO ] Waiting 10s...
+[2026-04-20 04:49:29] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:49:29] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:49:29] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:49:29] [INFO ] Waiting 10s...
+[2026-04-20 04:49:39] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:49:39] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:49:39] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:49:39] [INFO ] Waiting 10s...
+[2026-04-20 04:49:49] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:49:50] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:49:50] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:49:50] [INFO ] Waiting 10s...
+[2026-04-20 04:50:00] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:50:00] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:50:00] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:50:00] [INFO ] Waiting 10s...
+[2026-04-20 04:50:10] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:50:10] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:50:10] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:50:10] [INFO ] Waiting 10s...
+[2026-04-20 04:50:20] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:50:20] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:50:20] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:50:20] [INFO ] Waiting 10s...
+[2026-04-20 04:50:30] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:50:31] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:50:31] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:50:31] [INFO ] Waiting 10s...
+[2026-04-20 04:50:41] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:50:41] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:50:41] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:50:41] [INFO ] Waiting 10s...
+[2026-04-20 04:50:51] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:50:51] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:50:51] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:50:51] [INFO ] Waiting 10s...
+[2026-04-20 04:51:01] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:51:01] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:51:01] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:51:01] [INFO ] Waiting 10s...
+[2026-04-20 04:51:11] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:51:12] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:51:12] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:51:12] [INFO ] Waiting 10s...
+[2026-04-20 04:51:22] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:51:22] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:51:22] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:51:22] [INFO ] Waiting 10s...
+[2026-04-20 04:51:32] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:51:32] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:51:32] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:51:32] [INFO ] Waiting 10s...
+[2026-04-20 04:51:42] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:51:43] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:51:43] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:51:43] [INFO ] Waiting 10s...
+[2026-04-20 04:51:53] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:51:53] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:51:53] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:51:53] [INFO ] Waiting 10s...
+[2026-04-20 04:52:03] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:52:03] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:52:03] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:52:03] [INFO ] Waiting 10s...
+[2026-04-20 04:52:13] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:52:13] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:52:13] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:52:13] [INFO ] Waiting 10s...
+[2026-04-20 04:52:23] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:52:24] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:52:24] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:52:24] [INFO ] Waiting 10s...
+[2026-04-20 04:52:34] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:52:34] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:52:34] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:52:34] [INFO ] Waiting 10s...
+[2026-04-20 04:52:44] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:52:44] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:52:44] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:52:44] [INFO ] Waiting 10s...
+[2026-04-20 04:52:54] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:52:54] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:52:54] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:52:54] [INFO ] Waiting 10s...
+[2026-04-20 04:53:04] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:53:04] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:53:04] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:53:04] [INFO ] Waiting 10s...
+[2026-04-20 04:53:14] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:53:14] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:53:14] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:53:14] [INFO ] Waiting 10s...
+[2026-04-20 04:53:24] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:53:24] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:53:24] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:53:24] [INFO ] Waiting 10s...
+[2026-04-20 04:53:34] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:53:35] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:53:35] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:53:35] [INFO ] Waiting 10s...
+[2026-04-20 04:53:45] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:53:45] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:53:45] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:53:45] [INFO ] Waiting 10s...
+[2026-04-20 04:53:55] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:53:55] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:53:55] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:53:55] [INFO ] Waiting 10s...
+[2026-04-20 04:54:05] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:54:05] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:54:05] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:54:05] [INFO ] Waiting 10s...
+[2026-04-20 04:54:15] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:54:15] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:54:15] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:54:15] [INFO ] Waiting 10s...
+[2026-04-20 04:54:25] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:54:25] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:54:25] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:54:25] [INFO ] Waiting 10s...
+[2026-04-20 04:54:35] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:54:35] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:54:35] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:54:35] [INFO ] Waiting 10s...
+[2026-04-20 04:54:45] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:54:46] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:54:46] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:54:46] [INFO ] Waiting 10s...
+[2026-04-20 04:54:56] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:54:56] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:54:56] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:54:56] [INFO ] Waiting 10s...
+[2026-04-20 04:55:06] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:55:06] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:55:06] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:55:06] [INFO ] Waiting 10s...
+[2026-04-20 04:55:16] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:55:16] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:55:16] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:55:16] [INFO ] Waiting 10s...
+[2026-04-20 04:55:26] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:55:26] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:55:26] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:55:26] [INFO ] Waiting 10s...
+[2026-04-20 04:55:36] [POLL ] Polling 192.168.0.200 from 2026-04-20T10:31:52+06:00
+[2026-04-20 04:55:36] [POLL ] 1 event(s) received from 192.168.0.200
+[2026-04-20 04:55:36] [POLL ] No employee punches in this batch from 192.168.0.200
+[2026-04-20 04:55:36] [INFO ] Waiting 10s...

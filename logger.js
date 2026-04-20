@@ -1,22 +1,15 @@
 // =============================================
 //  logger.js — Structured logger
-//  Writes to console AND service_log.txt
-//  with timestamps and HTTP status context
+//
+//  NODE_ENV=development → all levels to file
+//  NODE_ENV=production  → only WARN + ERROR to file
+//  Console always gets everything
 // =============================================
 const fs   = require("fs");
 const path = require("path");
 
 const LOG_FILE = path.join(__dirname, "service_log.txt");
-
-// Keep log file under 10MB — rotate if too large
-function rotateLogs() {
-  try {
-    const stats = fs.statSync(LOG_FILE);
-    if (stats.size > 10 * 1024 * 1024) {
-      fs.renameSync(LOG_FILE, LOG_FILE.replace(".txt", "_old.txt"));
-    }
-  } catch (_) {}
-}
+const IS_DEV   = process.env.NODE_ENV !== "production";
 
 function timestamp() {
   return new Date().toISOString().replace("T", " ").substring(0, 19);
@@ -24,11 +17,19 @@ function timestamp() {
 
 function write(level, message) {
   const line = `[${timestamp()}] [${level}] ${message}`;
+
+  // Always print to console
   console.log(line);
-  try {
-    rotateLogs();
-    fs.appendFileSync(LOG_FILE, line + "\n");
-  } catch (_) {}
+
+  // Development → write everything to file
+  // Production  → write only WARN and ERROR
+  const shouldWrite = IS_DEV || level === "ERROR" || level === "WARN ";
+
+  if (shouldWrite) {
+    try {
+      fs.appendFileSync(LOG_FILE, line + "\n");
+    } catch (_) {}
+  }
 }
 
 const logger = {
@@ -40,7 +41,7 @@ const logger = {
 
   /**
    * Logs HRMS API errors with specific messages per HTTP status code.
-   * This tells the IT department exactly why sync stopped.
+   * Tells the IT department exactly why sync stopped.
    */
   apiError(status, message, url) {
     const reasons = {
