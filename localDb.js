@@ -142,30 +142,17 @@ function markSynced(id) {
 
 /**
  * Record a failed sync attempt.
- * Keeps status as PENDING so it will be retried.
- * After MAX_ATTEMPTS, marks as FAILED and stops retrying.
+ * Keeps status as PENDING and retries forever
+ * until HRMS API recovers and returns 200/201.
  */
-const MAX_ATTEMPTS = 10;
 function recordFailedAttempt(id, errorMessage) {
-  const row = db.prepare("SELECT attempts FROM punch_queue WHERE id = ?").get(id);
-  if (!row) return;
-
-  if (row.attempts + 1 >= MAX_ATTEMPTS) {
-    db.prepare(`
-      UPDATE punch_queue
-      SET sync_status = 'FAILED',
-          attempts    = attempts + 1,
-          last_error  = ?
-      WHERE id = ?
-    `).run(errorMessage, id);
-  } else {
-    db.prepare(`
-      UPDATE punch_queue
-      SET attempts   = attempts + 1,
-          last_error = ?
-      WHERE id = ?
-    `).run(errorMessage, id);
-  }
+  // Retries forever — no max attempts
+  db.prepare(`
+    UPDATE punch_queue
+    SET attempts   = attempts + 1,
+        last_error = ?
+    WHERE id = ?
+  `).run(errorMessage, id);
 }
 
 // =============================================
