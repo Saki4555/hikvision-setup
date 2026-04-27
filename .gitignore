@@ -48,3 +48,5 @@ Thumbs.db
 *.db
 *.db-shm
 *.db-wal
+attendance.db-shm
+attendance.db-wal
