@@ -50,3 +50,5 @@ Thumbs.db
 *.db-wal
 attendance.db-shm
 attendance.db-wal
+
+faces/
