@@ -4,7 +4,7 @@
 :: Log file is wiped clean on every fresh start
 
 :START
-cd /d "E:\Web_Dev\JOB\revinns-limited\xx-att-api\sqlite-node-js-version"
+cd /d "C:\Users\User\OneDrive\Desktop\temp-dev\nexirion\hikvision-setup"
 
 :: Overwrite log file on every fresh start (keeps it clean)
 echo [START] System initiated at %date% %time% > service_log.txt

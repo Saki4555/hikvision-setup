@@ -11,11 +11,16 @@
 //    - Indexes for fast PENDING queries
 //    - Transactions for atomic batch inserts
 //    - Duplicate detection before insert
+//    - Rejected punches → FAILED after MAX_REJECT_ATTEMPTS
+//    - resetFailed() puts FAILED punches back to PENDING
 // =============================================
 const Database = require("better-sqlite3");
-const path     = require("path");
+const path = require("path");
 
 const db = new Database(path.join(__dirname, "attendance.db"));
+
+// Rejected (API refused) attempts before a punch becomes FAILED
+const MAX_REJECT_ATTEMPTS = 10;
 
 // ---- WAL mode: faster writes, safe on power loss ----
 db.pragma("journal_mode = WAL");
@@ -24,7 +29,7 @@ db.pragma("synchronous = NORMAL"); // safe + fast balance
 // ---- Create tables ----
 db.exec(`
   -- Every punch from every device lives here
-  -- Status lifecycle: PENDING → SYNCED
+  -- Status lifecycle: PENDING → SYNCED  (or PENDING → FAILED → PENDING)
   CREATE TABLE IF NOT EXISTS punch_queue (
     id           INTEGER PRIMARY KEY AUTOINCREMENT,
     emp_no       TEXT    NOT NULL,
@@ -39,14 +44,12 @@ db.exec(`
   );
 
   -- Checkpoint: last event time we received per device
-  -- Used to ask Hikvision "give me everything AFTER this time"
   CREATE TABLE IF NOT EXISTS device_state (
     ip_address  TEXT PRIMARY KEY,
     last_time   TEXT NOT NULL,
     updated_at  TEXT NOT NULL DEFAULT (datetime('now', 'localtime'))
   );
 
-  -- ---- Indexes for performance ----
   -- Fast lookup of PENDING records (used every poll cycle)
   CREATE INDEX IF NOT EXISTS idx_punch_status
     ON punch_queue (sync_status, id);
@@ -64,10 +67,6 @@ db.exec(`
 //  CHECKPOINT — device_state
 // =============================================
 
-/**
- * Get the last event time we received from a device.
- * Returns ISO string or null (first run ever).
- */
 function getCheckpoint(ipAddress) {
   const row = db
     .prepare("SELECT last_time FROM device_state WHERE ip_address = ?")
@@ -75,19 +74,16 @@ function getCheckpoint(ipAddress) {
   return row ? row.last_time : null;
 }
 
-/**
- * Save checkpoint for a device.
- * Called after every event we receive (including non-employee events)
- * so we never re-fetch old data.
- */
 function setCheckpoint(ipAddress, time) {
-  db.prepare(`
+  db.prepare(
+    `
     INSERT INTO device_state (ip_address, last_time, updated_at)
     VALUES (?, ?, datetime('now', 'localtime'))
     ON CONFLICT(ip_address) DO UPDATE SET
       last_time  = excluded.last_time,
       updated_at = excluded.updated_at
-  `).run(ipAddress, time);
+  `,
+  ).run(ipAddress, time);
 }
 
 // =============================================
@@ -96,9 +92,6 @@ function setCheckpoint(ipAddress, time) {
 
 /**
  * Save a batch of punches as PENDING in a single transaction.
- * Uses better-sqlite3's transaction() for atomicity —
- * if power is lost mid-write, nothing is partially saved.
- *
  * Skips duplicates silently (IGNORE on unique constraint).
  */
 const insertBatch = db.transaction((punches) => {
@@ -114,45 +107,77 @@ const insertBatch = db.transaction((punches) => {
 });
 
 /**
- * Get a batch of PENDING punches to sync.
- * Ordered by id ASC (oldest first — FIFO).
- * Limited to batchSize to avoid flooding the API.
+ * Get a batch of PENDING punches to sync (oldest first).
  */
 function getPendingBatch(batchSize = 100) {
-  return db.prepare(`
+  return db
+    .prepare(
+      `
     SELECT * FROM punch_queue
     WHERE sync_status = 'PENDING'
     ORDER BY id ASC
     LIMIT ?
-  `).all(batchSize);
+  `,
+    )
+    .all(batchSize);
 }
 
 /**
  * Mark a punch as SYNCED after confirmed API success.
- * Only called when API returns 200/201.
  */
 function markSynced(id) {
-  db.prepare(`
+  db.prepare(
+    `
     UPDATE punch_queue
     SET sync_status = 'SYNCED',
         synced_at   = datetime('now', 'localtime')
     WHERE id = ?
-  `).run(id);
+  `,
+  ).run(id);
 }
 
 /**
  * Record a failed sync attempt.
- * Keeps status as PENDING and retries forever
- * until HRMS API recovers and returns 200/201.
+ *
+ * isRejected = true  → API refused the punch (e.g. unknown employee):
+ *                      counts an attempt, becomes FAILED after the cap
+ * isRejected = false → temporary problem (network, 5xx, bad key):
+ *                      never counts, retries forever
  */
-function recordFailedAttempt(id, errorMessage) {
-  // Retries forever — no max attempts
-  db.prepare(`
+function recordFailedAttempt(id, errorMessage, isRejected = false) {
+  if (!isRejected) {
+    db.prepare(`UPDATE punch_queue SET last_error = ? WHERE id = ?`).run(
+      errorMessage,
+      id,
+    );
+    return;
+  }
+
+  db.prepare(
+    `
     UPDATE punch_queue
-    SET attempts   = attempts + 1,
-        last_error = ?
+    SET attempts    = attempts + 1,
+        last_error  = ?,
+        sync_status = CASE WHEN attempts + 1 >= ? THEN 'FAILED' ELSE 'PENDING' END
     WHERE id = ?
-  `).run(errorMessage, id);
+  `,
+  ).run(errorMessage, MAX_REJECT_ATTEMPTS, id);
+}
+
+/**
+ * Put all FAILED punches back to PENDING with a fresh attempt count.
+ * Returns how many rows were reset.
+ */
+function resetFailed() {
+  return db
+    .prepare(
+      `
+    UPDATE punch_queue
+    SET sync_status = 'PENDING', attempts = 0
+    WHERE sync_status = 'FAILED'
+  `,
+    )
+    .run().changes;
 }
 
 // =============================================
@@ -160,14 +185,18 @@ function recordFailedAttempt(id, errorMessage) {
 // =============================================
 
 function getStats() {
-  const row = db.prepare(`
-    SELECT
+  const row = db
+    .prepare(
+      `
+        SELECT
       COUNT(*) AS total,
-      SUM(CASE WHEN sync_status = 'PENDING' THEN 1 ELSE 0 END) AS pending,
-      SUM(CASE WHEN sync_status = 'SYNCED'  THEN 1 ELSE 0 END) AS synced,
-      SUM(CASE WHEN sync_status = 'FAILED'  THEN 1 ELSE 0 END) AS failed
+      COALESCE(SUM(CASE WHEN sync_status = 'PENDING' THEN 1 ELSE 0 END), 0) AS pending,
+      COALESCE(SUM(CASE WHEN sync_status = 'SYNCED'  THEN 1 ELSE 0 END), 0) AS synced,
+      COALESCE(SUM(CASE WHEN sync_status = 'FAILED'  THEN 1 ELSE 0 END), 0) AS failed
     FROM punch_queue
-  `).get();
+  `,
+    )
+    .get();
   return row;
 }
 
@@ -178,5 +207,6 @@ module.exports = {
   getPendingBatch,
   markSynced,
   recordFailedAttempt,
+  resetFailed,
   getStats,
 };

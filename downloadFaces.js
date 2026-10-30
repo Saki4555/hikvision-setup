@@ -1,3 +1,4 @@
+// downloadFaces.js
 require("dotenv").config();
 const axios  = require("axios");
 const crypto = require("crypto");
@@ -16,15 +17,12 @@ function md5(str) {
   return crypto.createHash("md5").update(str).digest("hex");
 }
 
-function getPassword(ip) {
-  return ["192.168.9.217", "192.168.6.209"].includes(ip) ? "Genesis@564" : "hik12345";
-}
+// ip → password, read from TERMINALS in .env
+const PASSWORDS = Object.fromEntries(getTerminals().map((t) => [t.ip, t.password]));
 
-// ! if port
-// function getPassword(ip) {
-//   const bare = ip.split(":")[0];
-//   return ["192.168.9.217", "192.168.6.209"].includes(bare) ? "Genesis@564" : "hik12345";
-// }
+function getPassword(ip) {
+  return PASSWORDS[ip];
+}
 
 // ---- Build Digest auth header ----
 async function getDigestHeader(url, username, password, method = "GET") {
@@ -294,6 +292,13 @@ async function main() {
 
   const terminals = getTerminals();
   if (!terminals.length) { console.error("No terminals in .env"); process.exit(1); }
+
+  const noPassword = terminals.filter((t) => !t.password);
+  if (noPassword.length) {
+    noPassword.forEach((t) => console.error(`Terminal ${t.ip} is missing "password" in .env`));
+    process.exit(1);
+  }
+
   console.log(`Processing ${terminals.length} device(s)...\n`);
 
   let totalSaved = 0, totalSkipped = 0;

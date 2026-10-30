@@ -20,16 +20,13 @@ const PAGE_SIZE = 1000;
  * @param {string} apiUrl    - Full API URL of the device
  * @param {string} startTime - ISO time e.g. "2024-01-01T00:00:00+06:00"
  * @param {string} endTime   - ISO time e.g. "2024-12-31T00:00:00+06:00"
+ * @param {string} password  - Device admin password (from TERMINALS in .env)
  * @returns {Array|null}     - Full array of all attendance events, or null
  */
-async function getDataFromApi(apiUrl, startTime, endTime) {
+async function getDataFromApi(apiUrl, startTime, endTime, password) {
 
-  // ---- Determine device credentials ----
-  const specialIps = ["192.168.9.217", "192.168.6.209"];
-  const ipMatch = apiUrl.match(/http:\/\/([\d.]+)\//);
-  const deviceIp = ipMatch ? ipMatch[1] : "";
+  // ---- Device credentials (password comes from TERMINALS in .env) ----
   const username = "admin";
-  const password = specialIps.includes(deviceIp) ? "Genesis@564" : "hik12345";
 
   // ---- Get Digest credentials on first request ----
   // We do one initial call to get the WWW-Authenticate challenge,

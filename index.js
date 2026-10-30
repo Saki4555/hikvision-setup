@@ -5,7 +5,7 @@
 //    1. Checkpoint logic     — never re-fetch old data
 //    2. State machine        — PENDING → SYNCED lifecycle
 //    3. Anti-flood batcher   — sends 100 records at a time
-//    4. Positive ACK         — only marks SYNCED on 200/201
+//    4. Positive ACK         — only marks SYNCED on confirmed success
 //    5. Watchdog error log   — specific HTTP error messages
 // =============================================
 require("dotenv").config();
@@ -18,26 +18,28 @@ const {
   getPendingBatch,
   markSynced,
   recordFailedAttempt,
+  resetFailed,
   getStats,
 } = require("./localDb");
 const { getDataFromApi } = require("./hikvision");
 
 // ---- Config ----
-const POLL_INTERVAL_MS = parseInt(process.env.POLL_INTERVAL_MS) || 10000;
-const HRMS_API_URL     = process.env.HRMS_API_URL   || "http://localhost:4000/api/attlog";
-const HRMS_API_TOKEN   = process.env.HRMS_API_TOKEN || "123456";
-
-// EMPNO_TYPE: "number" → parseInt (Oracle NUMBER column)
-//             "string" → as-is   (Oracle VARCHAR column e.g. SL737)
-const EMPNO_TYPE = process.env.EMPNO_TYPE || "number";
+const POLL_INTERVAL_MS    = parseInt(process.env.POLL_INTERVAL_MS) || 10000;
+const HRMS_API_URL        = process.env.HRMS_API_URL        || "";
+const HRMS_API_DEVICE_KEY = process.env.HRMS_API_DEVICE_KEY || "";
 
 // How many PENDING records to send per sync cycle
 // Prevents flooding the HRMS API after a long downtime
 const SYNC_BATCH_SIZE = 100;
 
 // Delay between each request in a batch (ms)
-// Keeps the Oracle server comfortable
 const BATCH_DELAY_MS = 200;
+
+// How often FAILED punches are put back to PENDING (ms)
+const RETRY_FAILED_EVERY_MS = 60 * 60 * 1000; // 1 hour
+
+// ip → terminal config (filled in main() after validation)
+let TERMINAL_MAP = {};
 
 // =============================================
 //  Load terminals from .env
@@ -56,9 +58,44 @@ function getTerminals() {
 }
 
 // =============================================
-//  IN/OUT resolver
-//  1 or 2 → use directly
-//  3 (auto) → before 11am = IN (1), else OUT (2)
+//  Validate config at startup — fail loudly
+// =============================================
+function validateConfig(terminals) {
+  const problems = [];
+
+  if (!HRMS_API_URL)        problems.push("HRMS_API_URL is missing in .env");
+  if (!HRMS_API_DEVICE_KEY) problems.push("HRMS_API_DEVICE_KEY is missing in .env");
+  if (terminals.length === 0) problems.push("TERMINALS is empty or invalid in .env");
+
+  const seenIds = new Set();
+  for (const t of terminals) {
+    if (!t.ip || !t.api_string) {
+      problems.push(`Terminal missing ip or api_string: ${JSON.stringify(t)}`);
+    }
+    if (!t.att_device_id) {
+      problems.push(`Terminal ${t.ip} is missing att_device_id`);
+    } else if (seenIds.has(t.att_device_id)) {
+      problems.push(`Duplicate att_device_id "${t.att_device_id}" (must be unique per device)`);
+    } else {
+      seenIds.add(t.att_device_id);
+    }
+    if (t.device_location_id === undefined || t.device_location_id === null || t.device_location_id === "") {
+      problems.push(`Terminal ${t.ip} is missing device_location_id`);
+    }
+    if (!t.password) {
+      problems.push(`Terminal ${t.ip} is missing password`);
+    }
+  }
+
+  if (problems.length > 0) {
+    problems.forEach((p) => logger.error(`CONFIG ERROR — ${p}`));
+    throw new Error("Invalid configuration — fix .env and restart");
+  }
+}
+
+// =============================================
+//  IN/OUT resolver (kept for local records only —
+//  the new API decides IN/OUT by itself)
 // =============================================
 function resolveInOutType(inOutType, eventTime) {
   if (inOutType !== 3) return inOutType;
@@ -66,11 +103,13 @@ function resolveInOutType(inOutType, eventTime) {
   return hour >= 6 && hour < 11 ? 1 : 2;
 }
 
+// "2026-10-30T09:15:23+06:00" → "2026/10/30 09:15"
+function toHrmsTime(t) {
+  return t.substring(0, 16).replace("T", " ").replace(/-/g, "/");
+}
+
 // =============================================
 //  FEATURE 1: CHECKPOINT
-//  Get start time for device polling.
-//  Reads MAX punch time from SQLite — never
-//  fetches data we already have.
 // =============================================
 function getStartTime(ipAddress) {
   const checkpoint = getCheckpoint(ipAddress);
@@ -86,72 +125,63 @@ function getStartTime(ipAddress) {
 
 // =============================================
 //  FEATURE 4 + 5: HRMS API CALL
-//  Positive acknowledgment — only returns true
-//  on 200/201. Logs specific HTTP errors.
+//  Success = API says success AND rejected = 0
+//  (inserted or duplicate both count as success)
 // =============================================
 async function sendOneToHRMS(punch) {
-
-  // Resolve AM_EMPNO based on EMPNO_TYPE in .env
-  // "number" → parseInt  (for Oracle NUMBER(15) columns)
-  // "string" → as-is     (for Oracle VARCHAR columns e.g. SL737)
-  const empNo = EMPNO_TYPE === "string"
-    ? punch.emp_no
-    : parseInt(punch.emp_no);
+  const term = TERMINAL_MAP[punch.ip_address];
+  if (!term) {
+    return { success: false, error: `No terminal config for ${punch.ip_address}` };
+  }
 
   const body = {
-    AM_EMPNO:       empNo,
-    AM_TIME_IN_OUT: punch.in_out_time,
-    AM_TYPE_IN_OUT: punch.in_out_type,
-    AM_MAC_ID:      punch.ip_address,
-    AM_LAT_IN_OUT:  null,
-    AM_LON_IN_OUT:  null,
-    T_ZONE:         null,
-    LOCATION_ID:    null,
-    TEAM_LEAD_ID:   null,
+    emp_id:             String(punch.emp_no),
+    log_date_time:      toHrmsTime(punch.in_out_time),
+    att_device_id:      term.att_device_id,
+    device_location_id: term.device_location_id,
   };
 
   try {
     const response = await axios.post(HRMS_API_URL, body, {
       headers: {
-        Authorization: `Bearer ${HRMS_API_TOKEN}`,
+        "X-Device-Key": HRMS_API_DEVICE_KEY,
         "Content-Type": "application/json",
       },
       timeout: 10000,
     });
 
-    // Feature 4: Positive ACK — only accept 200 or 201
-    if (response.status === 200 || response.status === 201) {
+    const d = response.data;
+    const rejected = d?.data?.rejected ?? 0;
+
+    if (d?.success === true && rejected === 0) {
       return { success: true };
     }
 
-    return { success: false, error: `Unexpected status ${response.status}` };
+    // API answered but refused the punch → counts toward FAILED
+    const detail = JSON.stringify(d?.data?.results ?? d).slice(0, 300);
+    logger.warn(`HRMS rejected punch ${punch.emp_no} @ ${body.log_date_time} — ${detail}`);
+    return { success: false, error: detail, rejected: true };
   } catch (err) {
     const status  = err.response?.status;
-    const message = err.response?.data?.error || err.message;
+    const message = String(
+      err.response?.data?.message || err.response?.data?.error || err.message
+    );
 
-    // Duplicate in Oracle — treat as success (data already there)
-    if (status === 500 && message.toLowerCase().includes("unique")) {
-      return { success: true };
-    }
-
-    // Feature 5: Watchdog — log specific HTTP error codes
     if (status) {
       logger.apiError(status, message, HRMS_API_URL);
     } else {
-      // Network error — timeout, connection refused, etc.
       logger.error(`HRMS API unreachable — ${err.message}`);
     }
 
-    return { success: false, error: message };
+    // 400 / 422 = API refused this punch's data → counts toward FAILED
+    // Everything else (network, 401/403/404/429, 5xx) = temporary → retry forever
+    const rejected = status === 400 || status === 422;
+    return { success: false, error: message, rejected };
   }
 }
 
 // =============================================
 //  FEATURE 3: ANTI-FLOOD BATCHER
-//  Reads PENDING records in batches of 100.
-//  Sends one at a time with a small delay
-//  between each to be kind to the Oracle server.
-//  Only marks SYNCED on confirmed 200/201.
 // =============================================
 async function syncPendingBatch() {
   const batch = getPendingBatch(SYNC_BATCH_SIZE);
@@ -167,16 +197,13 @@ async function syncPendingBatch() {
     const result = await sendOneToHRMS(punch);
 
     if (result.success) {
-      // Feature 4: Positive ACK — only mark SYNCED on confirmed success
       markSynced(punch.id);
       synced++;
     } else {
-      // Keep as PENDING, increment attempt counter
-      recordFailedAttempt(punch.id, result.error);
+      recordFailedAttempt(punch.id, result.error, result.rejected === true);
       failed++;
     }
 
-    // Anti-flood delay between requests
     if (BATCH_DELAY_MS > 0) {
       await new Promise((r) => setTimeout(r, BATCH_DELAY_MS));
     }
@@ -188,20 +215,17 @@ async function syncPendingBatch() {
 
 // =============================================
 //  POLL ONE DEVICE
-//  Feature 1: Checkpoint — fetch only new events
-//  Feature 2: Save ALL as PENDING first
 // =============================================
 async function pollDevice(terminal) {
-  const { ip, api_string, in_out } = terminal;
+  const { ip, api_string, in_out, password } = terminal;
 
-  // Feature 1: Checkpoint — only ask for events after last known time
   const startTime = getStartTime(ip);
   const tomorrow  = new Date(Date.now() + 86400000);
   const endTime   = tomorrow.toISOString().substring(0, 10) + "T00:00:00+06:00";
 
   logger.poll(`Polling ${ip} from ${startTime}`);
 
-  const events = await getDataFromApi(api_string, startTime, endTime);
+  const events = await getDataFromApi(api_string, startTime, endTime, password);
 
   if (!events || events.length === 0) {
     logger.poll(`No new events from ${ip}`);
@@ -210,7 +234,6 @@ async function pollDevice(terminal) {
 
   logger.poll(`${events.length} event(s) received from ${ip}`);
 
-  // Build list of employee punches to save
   const punchesToSave = [];
 
   for (const event of events) {
@@ -218,7 +241,6 @@ async function pollDevice(terminal) {
     const empNo = event.employeeNoString || null;
 
     // Always update checkpoint — even for door lock / system events
-    // This prevents re-fetching non-employee events on restart
     setCheckpoint(ip, time);
 
     if (!empNo) continue; // skip door lock / system events
@@ -238,8 +260,6 @@ async function pollDevice(terminal) {
     return;
   }
 
-  // Feature 2: Save ALL punches as PENDING in a single transaction
-  // If power is lost here, nothing is partially saved
   insertBatch(punchesToSave);
 
   logger.info(`Saved ${punchesToSave.length} punch(es) as PENDING from ${ip}`);
@@ -250,15 +270,19 @@ async function pollDevice(terminal) {
 // =============================================
 async function main() {
   logger.info("==============================================");
-  logger.info("  Hikvision Attendance System — Node.js v5");
+  logger.info("  Hikvision Attendance System — Node.js v6");
   logger.info("  1. Checkpoint   — incremental device fetch");
   logger.info("  2. State machine — PENDING → SYNCED");
   logger.info("  3. Anti-flood    — batch sync (100/cycle)");
-  logger.info("  4. Positive ACK  — confirmed 200/201 only");
+  logger.info("  4. Positive ACK  — confirmed success only");
   logger.info("  5. Watchdog      — HTTP error logging");
   logger.info(`  API: ${HRMS_API_URL}`);
-  logger.info(`  EMPNO type: ${EMPNO_TYPE}`);
   logger.info("==============================================");
+
+  // ---- Load + validate terminals and config ----
+  const terminals = getTerminals();
+  validateConfig(terminals);
+  TERMINAL_MAP = Object.fromEntries(terminals.map((t) => [t.ip, t]));
 
   // ---- Startup stats ----
   const stats = getStats();
@@ -269,29 +293,32 @@ async function main() {
   }
 
   // ---- Show terminals ----
-  const terminals = getTerminals();
   logger.info(`Loaded ${terminals.length} terminal(s):`);
   terminals.forEach((t) => {
     const checkpoint = getCheckpoint(t.ip) || "first run";
-    logger.info(`  → ${t.ip} | ${t.location || "no location"} | checkpoint: ${checkpoint}`);
+    logger.info(`  → ${t.ip} | ${t.location || "no location"} | ${t.att_device_id} | loc ${t.device_location_id} | checkpoint: ${checkpoint}`);
   });
-
-  // ---- Test HRMS API ----
-  try {
-    await axios.get(`${HRMS_API_URL}?page=1&limit=1`, {
-      headers: { Authorization: `Bearer ${HRMS_API_TOKEN}` },
-      timeout: 5000,
-    });
-    logger.info("HRMS API reachable — starting poll loop");
-  } catch (err) {
-    logger.warn(`HRMS API not reachable on startup — ${err.message}`);
-    logger.warn("Polling will continue — punches saved locally until API recovers");
-  }
 
   logger.info("----------------------------------------------");
 
+  // ---- Give FAILED punches another chance at startup ----
+  let lastRetryAt = Date.now();
+  const resetAtStart = resetFailed();
+  if (resetAtStart > 0) logger.info(`Reset ${resetAtStart} FAILED punch(es) to PENDING`);
+
   // ---- Infinite poll loop ----
   while (true) {
+    // Hourly: put FAILED punches back to PENDING (e.g. employee added to HRMS later)
+    if (Date.now() - lastRetryAt >= RETRY_FAILED_EVERY_MS) {
+      lastRetryAt = Date.now();
+      try {
+        const n = resetFailed();
+        if (n > 0) logger.info(`Hourly retry — reset ${n} FAILED punch(es) to PENDING`);
+      } catch (err) {
+        logger.error(`Reset FAILED error: ${err.message}`);
+      }
+    }
+
     // Step 1: Sync PENDING records to HRMS (drain backlog first)
     try {
       await syncPendingBatch();
